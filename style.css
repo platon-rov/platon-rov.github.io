@@ -401,6 +401,10 @@ body {
     font-size: 15px;
 }
 
+.copyright a {
+        color: inherit;
+    }
+
 /* for tablets */
 
 @media screen and (max-width:1100px) {
@@ -408,7 +412,7 @@ body {
         margin: 38.5px auto;
         display: block;
         float: none;
-        width: 420px;
+        text-align: center;
     }
     
     .main-logo__text {
@@ -467,6 +471,7 @@ body {
     }
     
     .features-item {
+        width: auto;
         float: none;
         margin: 0 auto;
         font-size: 20px;
@@ -522,15 +527,21 @@ body {
         font-size: 45px;
     }
     
-    .copyright a {
-        color: inherit;
-    }
 }
 
 /* extra small devices */
 
 @media screen and (max-width:600px) {
     #nav-button {
-        top: 60px;
+        top: 93px;
+    }
+    
+    .button, .main-search, .main-search__search {
+        width: 200px;
+    }
+    
+    .main-content, .features-content, .about-top, .example-bot, .footer-top, .footer-bottom {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }

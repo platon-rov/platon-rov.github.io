@@ -22,7 +22,7 @@ body {
 }
 
 .main {
-    background: url(images/main-back.png);
+    background: url(images/main-back.jpg);
     background-size: cover;
     min-height: 100vh;
 }
@@ -239,7 +239,7 @@ body {
 }
 
 .features-content--pink {
-    background: url(images/pink_back.png);
+    background: url(images/pink_back.jpg);
     background-size: cover;
     text-align: center;
     position: relative;
@@ -273,7 +273,7 @@ body {
 .about-top__hand {
     height: 495px;
     width: 529px;
-    background: url(images/hand.png);
+    background: url(images/hand.jpg);
     float: left;
     margin-right: 100px;
 }
@@ -301,7 +301,7 @@ body {
 }
 
 .about-bottom {
-    background: url(images/landscape.png);
+    background: url(images/landscape.jpg);
     background-size: cover;
 }
 
@@ -315,7 +315,7 @@ body {
 }
 
 .example-top {
-    background: url(images/taxte.png);
+    background: url(images/taxte.jpg);
     background-size: cover;
     height: 660px;
 }
@@ -367,7 +367,7 @@ body {
     float: right;
     height: 495px;
     width: 529px;
-    background: url(images/hand2.png);
+    background: url(images/hand2.jpg);
     margin-left: 100px;
 }
 

@@ -24,6 +24,7 @@ body {
 .main {
     background: url(images/main-back.jpg);
     background-size: cover;
+    background-attachment: fixed;
     min-height: 100vh;
 }
 
@@ -303,6 +304,7 @@ body {
 .about-bottom {
     background: url(images/landscape.jpg);
     background-size: cover;
+    background-position: bottom;
 }
 
 .about-bottom__purple {
@@ -527,6 +529,10 @@ body {
         font-size: 45px;
     }
     
+    .main-content, .features-content, .about-top, .example-bot, .footer-top, .footer-bottom {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 /* extra small devices */
@@ -540,8 +546,4 @@ body {
         width: 200px;
     }
     
-    .main-content, .features-content, .about-top, .example-bot, .footer-top, .footer-bottom {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
 }

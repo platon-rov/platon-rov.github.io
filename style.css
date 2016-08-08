@@ -502,7 +502,7 @@ body {
     }
     
     .about-top-text, .example-bot-text {
-        margin: 50px 20px;
+        margin: 50px 10px;
     }
     
     .about-top-text__heading {
@@ -558,7 +558,7 @@ body {
         width: 200px;
     }
     
-    .main-content, .features-content, .about-top, .example-bot,  .features-item {
+    .main-content, .features-content, .about-top,  .features-item {
         padding-left: 10px;
         padding-right: 10px;
     }

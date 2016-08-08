@@ -70,66 +70,6 @@ body {
     float: right;
 }
 
-#nav-button {
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    border-radius: 50px;
-    float: right;
-    margin: 26.5px 0px;
-    margin-right: 20px;
-    display: none;
-}
-
-.nav-line {
-    width: 34px;
-    height: 4px;
-    background: #000;
-    margin: 0 auto;
-    margin-top: 23px;
-    border-radius: 5px;
-}
-
-.nav-line:before {
-    content: "";
-    display: block;
-    width: 34px;
-    height: 4px;
-    background: #000;
-    border-radius: 5px;
-    position: relative;
-    top: -6px;
-    transition: transform 0.25s;
-}
-
-.nav-line:after {
-    content: "";
-    display: block;
-    width: 34px;
-    height: 4px;
-    background: #000;
-    border-radius: 5px;
-    position: relative;
-    top: 2px;
-    transition: transform 0.25s;
-}
-
-#nav-button.active .nav-line {
-    background: transparent;
-}
-
-#nav-button.active .nav-line:before {
-    top: 0px;
-    transform: rotateZ(45deg);
-    transition: transform 0.25s;
-} 
-
-#nav-button.active .nav-line:after {
-    top: -4px;
-    transform: rotateZ(-45deg);
-    transition: transform 0.25s;
-} 
-
 .main-menu {
     font-size: 0px;
     display: inline-block;
@@ -330,7 +270,9 @@ body {
 .example-top-content-bottom {
     position: absolute;
     bottom: 100px;
+    margin-left: 10px;
 }
+
 
 .example-top-content__button {
     background: none;
@@ -380,6 +322,10 @@ body {
     text-align: right;
 }
 
+.footer-top .content, .footer-bottom .content {
+    margin-left: 10px;
+}
+
 .footer-top {
     padding: 75px 0px 225px 0px;
     background: #e7526b; 
@@ -409,11 +355,12 @@ body {
 
 /* for tablets */
 
-@media screen and (max-width:1100px) {
+@media screen and (max-width:1120px) {
     .main-logo {
         margin: 38.5px auto;
         display: block;
         float: none;
+        margin-right: 10px;
         text-align: center;
     }
     
@@ -426,11 +373,65 @@ body {
     }
     
     #nav-button {
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        border-radius: 50px;
+        margin-right: 20px;
         display: block;
         position: absolute;
-        top: 0px;
-        left: 20px;
+        top: 31px;
+        left: 25px;
     }
+
+    .nav-line {
+        width: 34px;
+        height: 4px;
+        background: #000;
+        margin: 0 auto;
+        margin-top: 23px;
+        border-radius: 5px;
+    }
+
+    .nav-line:before {
+        content: "";
+        display: block;
+        width: 34px;
+        height: 4px;
+        background: #000;
+        border-radius: 5px;
+        position: relative;
+        top: -6px;
+        transition: transform 0.25s;
+    }
+
+    .nav-line:after {
+        content: "";
+        display: block;
+        width: 34px;
+        height: 4px;
+        background: #000;
+        border-radius: 5px;
+        position: relative;
+        top: 2px;
+        transition: transform 0.25s;
+    }
+
+    #nav-button.active .nav-line {
+        background: transparent;
+    }
+
+    #nav-button.active .nav-line:before {
+        top: 0px;
+        transform: rotateZ(45deg);
+        transition: transform 0.25s;
+    } 
+
+    #nav-button.active .nav-line:after {
+        top: -4px;
+        transform: rotateZ(-45deg);
+        transition: transform 0.25s;
+    } 
     
     #nav-button ~.main-nav {
         display: none;
@@ -477,6 +478,7 @@ body {
         float: none;
         margin: 0 auto;
         font-size: 20px;
+        text-align: center;
     }
     
     .features-item:nth-of-type(2n+1) {
@@ -512,7 +514,6 @@ body {
     }
     
     .example-top-content-bottom {
-        margin-left: 20px;
         font-size: 20px;
     }
     
@@ -521,7 +522,7 @@ body {
     }
     
     .footer-top, .footer-bottom {
-        padding: 75px 20px 225px 20px;
+        padding: 75px 20px 225px 0px;
         font-size: 20px;
     }
     
@@ -529,21 +530,41 @@ body {
         font-size: 45px;
     }
     
-    .main-content, .features-content, .about-top, .example-bot, .footer-top, .footer-bottom {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
 }
 
 /* extra small devices */
 
 @media screen and (max-width:600px) {
+    
+    .main-logo {
+    }
+    
+    .main-logo__logo {
+        display: inline-block;
+        top: -13px;
+    }
+    
+    .main-logo__text {
+        font-size: 15px;
+        display: inline-block;
+        width: 50px;
+    }
+    
     #nav-button {
-        top: 93px;
+        top: 45px;
     }
     
     .button, .main-search, .main-search__search {
         width: 200px;
+    }
+    
+    .main-content, .features-content, .about-top, .example-bot,  .features-item {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .features-item__p {
+        text-align: justify;
     }
     
 }

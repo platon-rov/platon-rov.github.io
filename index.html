@@ -1,150 +1,527 @@
 <!DOCTYPE HTML>
-<html lang="en">
-    <head>
-       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-       <meta name="keywords" content="Pex, Blaz Robar, Platon Rov, psd mockup" />
-       <title>Pex - Photoshop Website Template</title> 
-       <link rel="stylesheet" href="style.css">
-       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-       <meta name="viewport" content="width=device-width,initial-scale=1" />
-       <script src="https://code.jquery.com/jquery-latest.js"></script>
-        <script>
-        $(document).ready(function(){
-        $("#nav-button").click(function () {
-          $(this).toggleClass("active");
-        });
-        });
-        </script>
-    </head>
-    <body>
-        <div class="screen main">
-           <a name="about"></a>
-            <div class="main-header clearfix">
-                <div class="main-logo">
-                    <div class="main-logo__logo">
-                       <img src="images/pex_logo.png" alt="pex">
-                   </div>
-                    <span class="main-logo__text">Photoshop Website Template</span>
-                </div>
-                <div id="nav-button">
-                    <div class="nav-line"></div>
-                </div>
-                <div class="main-nav clearfix">
-                    <ul class="main-menu">
-                        <li class="main-menu__item"><a href="#about">About</a></li>
-                        <li class="main-menu__item"><a href="#howitworks">How it Works</a></li>
-                        <li class="main-menu__item"><a href="#services">Services</a></li>
-                        <li class="main-menu__item"><a href="#faq">FAQ</a></li>
-                        <li class="main-menu__item"><a href="#contact">Contact</a></li>
-                    </ul>
-                    <div class="main-search">
-                        <input type="text" class="main-search__search" placeholder="Search Website">
-                        <div class="main-search__icon">
-                            <a href="#"><img src="images/search-icon.png"; alt="Search!"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="main-content content clearfix">
-                <div class="main-content-wrapper">
-                    <h1 class="main-content__h1">Design your eyeballs<br>will thank you for</h1>
-                    <button class="button button--purple main-content__button">Get Started Today</button>
-                    <p class="main-content__p">Lorem ipsum dolor sit amet, consectur</p>
-                </div>
+<head>
+    <title>Вишенка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/modernizr.custom.70736.js"></script>
+    <noscript><link rel="stylesheet" type="text/css" href="css/noJS.css"/></noscript>
+    <!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+</head>
+<body>
+    <div class="screen main clearfix">
+        <header class="main-header">
+        </header>
+        <div class="main-logo">
+            <img src="/img/logo.png" alt="" class="main-logo__logo"> 
+        </div>
+    </div>
+    <div class="screen about">
+        <div class="about-content content">
+            <h1 class="about-content__heading">Вкусно и полезно<br>с натуральными ингредиентами!</h1>
+            <div class="about-content__undertext"></div>
+            <p class="about-content__text">Мы все знаем, что еда должна быть натуральной. Потому кондитерская «Вишенка»  предлагает ассортимент блюд из свежих и правильных компонентов:  без  транс-жиров,  без маргарина и красителей! Без ванилина, который производится химическим путём. Без невкусных растительных сливок!  В любой кухне разных стран есть большой выбор приготовления питательных, приятных на вкус блюд, которые изготовлены из натуральных продуктов. Накрывая праздничный стол, хозяйки иногда отказываются от натуральности в пользу вкуса. Я предлагаю удачный компромисс - и ваши гости и, особенно, дети будут приятно удивлены тем блюдам, которые я изготовлю для вашего торжества!</p>
+            <div class="about-images">
+                <img src="http://placehold.it/250x200" alt="" class="about-images__item">
+                <img src="http://placehold.it/250x200" alt="" class="about-images__item">
+                <img src="http://placehold.it/250x200" alt="" class="about-images__item">
+                <img src="http://placehold.it/250x200" alt="" class="about-images__item">
             </div>
         </div>
-        <div class="screen features">
-           <a name="howitworks"></a>
-            <div class="features-content clearfix">
-                <div class="features-item">
-                    <div class="features-item__h4">A fantastic heading</div>
-                    <div class="features-item__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>sed do eiusmod tempor incididunt ut labore et dolore<br>magna aliqua. Ut enim ad minim veniam, quis nostrud</div>
+    </div>
+    <div class="screen author">
+        <div class="author-content content clearfix">
+            <div class="author-content-text">
+                <div class="author-content-heading">
+                    <h1 class="author-content__name">Ольга Покотилова</h1>
+                    <h2 class="author-content__post">Автор</h2>
                 </div>
-                <div class="features-item">
-                    <div class="features-item__h4">Good day blokes</div>
-                    <div class="features-item__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>sed do eiusmod tempor incididunt ut labore et dolore<br>magna aliqua. Ut enim ad minim veniam, quis nostrud</div>
-                </div>
-                <div class="features-item">
-                    <div class="features-item__h4">Blazar robar for president</div>
-                    <div class="features-item__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>sed do eiusmod tempor incididunt ut labore et dolore<br>magna aliqua. Ut enim ad minim veniam, quis nostrud</div>
-                </div>
-                <div class="features-item">
-                    <div class="features-item__h4">vote for robar</div>
-                    <div class="features-item__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>sed do eiusmod tempor incididunt ut labore et dolore<br>magna aliqua. Ut enim ad minim veniam, quis nostrud</div>
-                </div>
+                <div class="author-content__undertext"></div>
+                <p class="author-content__about">"Занимаюсь кулинарией с детского возраста – с 8-и лет. Так что опыт работы с всевозможными блюдами огромный. А сейчас я удовольствием провожу время на кухне, чтобы побаловать уже своих детей чем-то очень вкусненьким. Мои близкие и друзья – самые восторженные поклонники моей кухни. Они любезно рекомендуют  своим  знакомым  заказывать уникальные блюда к праздникам только у меня."</p>
             </div>
-            <div class="features-content--pink">
-            <div class="features-content__arrow">
-                    <img src="images/arrow.png" alt="">
-                </div>
-                <div class="features-content">
-                    <h2 class="features-content__h2">Wicked & whack, bang bang ooo!</h2>
-                    <h6 class="features-content__h6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do<br>eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</h6>
-                    <button class="button features-content-button">Get Started Today</button>
-                </div>
-            </div>
+            <img src="http://placehold.it/350x500" alt="" class="author-content__image">
         </div>
-        <div class="screen about">
-           <a name="services"></a>
-            <div class="about-top clearfix">
-                <div class="about-top__hand"></div>
-                <div class="about-top-text">
-                    <h4 class="about-top-text__heading">A Heading is what you need here</h4>
-                    <p class="about-top-text__p--bold">Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    <br>
-                    <p class="about-top-text__p">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                </div>
-            </div>
-            <div class="about-bottom clearfix">
-                <div class="about-bottom__purple">
-                    <div class="about-content features-content">
-                        <h2 class="about-content__h2 features-content__h2">Experience the rush today!</h2>
-                        <h6 class="about-content__h6 features-content__h6">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br>incididunt ut labore et dolore magna aliqua consectetur adipisicing elit.</h6>
-                        <button class="button button--purple about-content__button features-content__button">Get Started Today</button>
-                        <p class="about-content__p">Lorem ipsum sitamet, consecteus</p>
-                    </div>
-                </div>
-            </div>
+    </div>
+    <div class="screen portfolio">
+        <div class="content portfolio-content">
+            <h1 class="portfolio-content__heading">В кондитерской «Вишенка» вы можете заказать как  малоизвестные так и классические кондитерские изделия</h1>
+            <div class="portfolio-content-undertext"></div>
+            <p class="portfolio-content-list__item">Уникальные торты Пьера Эрмэ, Рона Каленьюика, бисквит микрю с сливочным кремом</p>
+            <div class="portfolio-content__marker"></div>
+            <p class="portfolio-content-list__item">Излюбленные всеми «Наполеон», «Медовик», свадебные торты и караваи, французские пирожные, вкуснейшие французские пирожки, нежные трюфели, пралине, сдобные круасаны</p>
+            <div class="portfolio-content__marker"></div>
+            <p class="portfolio-content-list__item">Не забудьте о торте «Захер» и о знаменитых хачапури. Только с кондитерской «Вишенка» вы можете попробовать нежный зефир на меду. Домашний хлеб, квас, пастила и домашние шоколадные конфеты</p>
+            <div class="portfolio-content__marker"></div>
+            <p class="portfolio-content-list__item">Вы удивитесь прославленному «Коломбо» (рождественский и пасхальный кулич)</p>
+            <div class="portfolio-content__marker"></div>
+            <p class="portfolio-content-list__item">Приятные сюрпризы от диетической кухне – эклеры без яиц и сливочного масла, творожное печенье из цельнозерновой муки без сахара, нуга на меду</p>
+            <div class="portfolio-content__marker"></div>
+            <p class="portfolio-content-list__item">Разнообразное мороженное: «Пломбир», «Крем-брюле», «Сливочное»</p>
+            <h2 class="portfolio-content__p">В кондитерской «Вишенка» вы можете заказать  много других полезных вкусностей.</h2>
+           <div class="gamma-container gamma-loading" id="gamma-container">
+
+					<ul class="gamma-gallery">
+
+						<li>
+							<div data-alt="img03" data-description="<h3>Ананасовый Щербет</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/ananas.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/ananas.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/ananas.jpg" data-min-width="700"></div>
+								<div data-src="images/l/ananas.jpg" data-min-width="300"></div>
+								<div data-src="images/m/ananas.jpg" data-min-width="200"></div>
+								<div data-src="images/s/ananas.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/ananas.jpg"></div>
+								<noscript>
+									<img src="images/xs/ananas.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>
+						<li>
+							<div data-alt="img03" data-description="<h3>Замороженное суфле с малиной и киви</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/souffle.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/souffle.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/souffle.jpg" data-min-width="700"></div>
+								<div data-src="images/l/souffle.jpg" data-min-width="300"></div>
+								<div data-src="images/m/souffle.jpg" data-min-width="200"></div>
+								<div data-src="images/s/souffle.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/souffle.jpg"></div>
+								<noscript>
+									<img src="images/xs/souffle.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>
+						<li>
+							<div data-alt="img03" data-description="<h3>Крылышки индейки по-техасски</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/turkey.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/turkey.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/turkey.jpg" data-min-width="700"></div>
+								<div data-src="images/l/turkey.jpg" data-min-width="300"></div>
+								<div data-src="images/m/turkey.jpg" data-min-width="200"></div>
+								<div data-src="images/s/turkey.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/turkey.jpg"></div>
+								<noscript>
+									<img src="images/xs/turkey.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>
+						<li>
+							<div data-alt="img03" data-description="<h3>Куриные крылышки 'Джезебел'</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/chicken.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/chicken.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/chicken.jpg" data-min-width="700"></div>
+								<div data-src="images/l/chicken.jpg" data-min-width="300"></div>
+								<div data-src="images/m/chicken.jpg" data-min-width="200"></div>
+								<div data-src="images/s/chicken.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/chicken.jpg"></div>
+								<noscript>
+									<img src="images/xs/chicken.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>
+						<li>
+							<div data-alt="img03" data-description="<h3>Мороженное из голубики</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/blueberry.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/blueberry.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/blueberry.jpg" data-min-width="700"></div>
+								<div data-src="images/l/blueberry.jpg" data-min-width="300"></div>
+								<div data-src="images/m/blueberry.jpg" data-min-width="200"></div>
+								<div data-src="images/s/blueberry.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/blueberry.jpg"></div>
+								<noscript>
+									<img src="images/xs/blueberry.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>
+						<li>
+							<div data-alt="img03" data-description="<h3>Острые блины со свининой в меде</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/pork.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/pork.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/pork.jpg" data-min-width="700"></div>
+								<div data-src="images/l/pork.jpg" data-min-width="300"></div>
+								<div data-src="images/m/pork.jpg" data-min-width="200"></div>
+								<div data-src="images/s/pork.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/pork.jpg"></div>
+								<noscript>
+									<img src="images/xs/pork.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>
+						<li>
+							<div data-alt="img03" data-description="<h3>Сливочный кекс</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/cake.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/cake.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/cake.jpg" data-min-width="700"></div>
+								<div data-src="images/l/cake.jpg" data-min-width="300"></div>
+								<div data-src="images/m/cake.jpg" data-min-width="200"></div>
+								<div data-src="images/s/cake.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/cake.jpg"></div>
+								<noscript>
+									<img src="images/xs/cake.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>
+						<li>
+							<div data-alt="img03" data-description="<h3>Сырный торт с арахисовым маслом</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/pie.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/pie.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/pie.jpg" data-min-width="700"></div>
+								<div data-src="images/l/pie.jpg" data-min-width="300"></div>
+								<div data-src="images/m/pie.jpg" data-min-width="200"></div>
+								<div data-src="images/s/pie.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/pie.jpg"></div>
+								<noscript>
+									<img src="images/xs/pie.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>
+						<li>
+							<div data-alt="img03" data-description="<h3>Цукини с четырьма сырами</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/zucchini.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/zucchini.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/zucchini.jpg" data-min-width="700"></div>
+								<div data-src="images/l/zucchini.jpg" data-min-width="300"></div>
+								<div data-src="images/m/zucchini.jpg" data-min-width="200"></div>
+								<div data-src="images/s/zucchini.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/zucchini.jpg"></div>
+								<noscript>
+									<img src="images/xs/zucchini.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>
+						<li>
+							<div data-alt="img03" data-description="<h3>Швейцарский шоколадный торт с глазурью из молочного шоколада</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/chocolate_pie.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/chocolate_pie.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/chocolate_pie.jpg" data-min-width="700"></div>
+								<div data-src="images/l/chocolate_pie.jpg" data-min-width="300"></div>
+								<div data-src="images/m/chocolate_pie.jpg" data-min-width="200"></div>
+								<div data-src="images/s/chocolate_pie.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/chocolate_pie.jpg"></div>
+								<noscript>
+									<img src="images/xs/chocolate_pie.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>
+						<li>
+							<div data-alt="img03" data-description="<h3>Шоколадно кокосовый торт</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/chocolate_coconut.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/chocolate_coconut.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/chocolate_coconut.jpg" data-min-width="700"></div>
+								<div data-src="images/l/chocolate_coconut.jpg" data-min-width="300"></div>
+								<div data-src="images/m/chocolate_coconut.jpg" data-min-width="200"></div>
+								<div data-src="images/s/chocolate_coconut.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/chocolate_coconut.jpg"></div>
+								<noscript>
+									<img src="images/xs/chocolate_coconut.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>
+						<li>
+							<div data-alt="img03" data-description="<h3>Шоколадный крем Гран Марни с апельсиновыми дольками в шоколаде</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/cream_Gran.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/cream_Gran.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/cream_Gran.jpg" data-min-width="700"></div>
+								<div data-src="images/l/cream_Gran.jpg" data-min-width="300"></div>
+								<div data-src="images/m/cream_Gran.jpg" data-min-width="200"></div>
+								<div data-src="images/s/cream_Gran.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/cream_Gran.jpg"></div>
+								<noscript>
+									<img src="images/xs/cream_Gran.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>
+						<li>
+							<div data-alt="img03" data-description="<h3>Шоколадный торт с кремом пралине</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/chocolate_praline.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/chocolate_praline.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/chocolate_praline.jpg" data-min-width="700"></div>
+								<div data-src="images/l/chocolate_praline.jpg" data-min-width="300"></div>
+								<div data-src="images/m/chocolate_praline.jpg" data-min-width="200"></div>
+								<div data-src="images/s/chocolate_praline.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/chocolate_praline.jpg"></div>
+								<noscript>
+									<img src="images/xs/chocolate_praline.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>
+						<li>
+							<div data-alt="img03" data-description="<h3>Щербет из киви  и манго</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/scherber.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/scherber.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/scherber.jpg" data-min-width="700"></div>
+								<div data-src="images/l/scherber.jpg" data-min-width="300"></div>
+								<div data-src="images/m/scherber.jpg" data-min-width="200"></div>
+								<div data-src="images/s/scherber.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/scherber.jpg"></div>
+								<noscript>
+									<img src="images/xs/scherber.jpg" alt="img03"/>
+								</noscript>
+							</div>
+						</li>
+						<li>
+							<div data-alt="img03" data-description="<h3>Щербет со свежей папайи</h3>" data-max-width="1800" data-max-height="1350">
+								<div data-src="images/xxxl/scherber_pap.jpg" data-min-width="1300"></div>
+								<div data-src="images/xxl/scherber_pap.jpg" data-min-width="1000"></div>
+								<div data-src="images/xl/scherber_pap.jpg" data-min-width="700"></div>
+								<div data-src="images/l/scherber_pap.jpg" data-min-width="300"></div>
+								<div data-src="images/m/scherber_pap.jpg" data-min-width="200"></div>
+								<div data-src="images/s/scherber_pap.jpg" data-min-width="140"></div>
+								<div data-src="images/xs/scherber_pap.jpg"></div>
+								<noscript>
+									<img src="images/xs/scherber_pap.jpg" alt="img03"/>
+								</noscript>
+							</div>
+                        </li>
+					</ul>
+
+					<div class="gamma-overlay"></div>
+					<!-- <div id="loadmore" class="loadmore">Example for loading more items...</div> -->
+
+				</div>
         </div>
-        <div class="screen example">
-           <a name="faq"></a>
-            <div class="example-top">
-                <div class="example-top-content content">
-                    <div class="example-top-content-bottom">
-                        <button class="example-top-content__button">Photography</button>
-                        <h2 class="example-top-content__heading">Lorem ipsum dolor sit amet<br>consectetur adipisicing elit</h2>
-                        <div class="example-top__photo"></div>
-                        <p class="example-top__name">Blaz Robar, godlike web designer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="example-bot clearfix">
-                <div class="example-bot__hand">
-                </div>
-                <div class="example-bot-text">
-                    <h4 class="about-top-text__heading">A Heading is what you need here</h4>
-                    <p class="about-top-text__p--bold">Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    <br>
-                    <p class="about-top-text__p">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                </div>
-            </div>
+    </div>
+    <div class="screen prices clearfix">
+        <div class="prices-content content">
+           <h1 class="prices-content__heading">Меню и Цены</h1>
+            <table class="prices-content-table">
+                <thead class="prices-content-table__head">
+                    <tr>
+                        <td>Наименование</td>
+                        <td>Цена<br>100г, грн</td>
+                    </tr>
+                </thead>
+                <tbody class="prices-content-table__body">
+                    <tr>
+                        <td>«Альгамбра» (шоколадный торт с шоколадным кремом)</td>
+                        <td>22,00</td>
+                    </tr>
+                    <tr>
+                        <td>«Бриошь» (французский кулич)</td>
+                        <td>15,00</td>
+                    </tr>
+                    <tr>
+                        <td>«Коломбо» (итальянский кулич с солодом)</td>
+                        <td>15,00</td>
+                    </tr>
+                    <tr>
+                        <td>«Крокембуш» (заварные пирожные в форме  конуса)</td>
+                        <td>15,00</td>
+                    </tr>
+                    <tr>
+                        <td>«Марвлю» (французская меренга со сливочно-кофейным кремом)</td>
+                        <td>23,00</td>
+                    </tr>
+                    <tr>
+                        <td>«Медовик»</td>
+                        <td>13,00</td>
+                    </tr>
+                    <tr>
+                        <td>«Мильфей»  (пирожные  со слоеного теста с шоколадно-сливочным  кремом)</td>
+                        <td>22,00</td>
+                    </tr>
+                    <tr>
+                        <td>«Наполеон»</td>
+                        <td>14,00</td>
+                    </tr>
+                    <tr>
+                        <td>«Паннетоне»  (итальянский кулич)</td>
+                        <td>15,00</td>
+                    </tr>
+                    <tr>
+                        <td>«Пятибье» (слоеный пирог с ореховым кремом)</td>
+                        <td>22,00</td>
+                    </tr>
+                    <tr>
+                        <td>«Сент-Оноре» (песочно-заварной торт  с малиновым  желе  и заварным кремом)</td>
+                        <td>19,00</td>
+                    </tr>
+                    <tr>
+                        <td>Австралийские печенья</td>
+                        <td>14,00</td>
+                    </tr>
+                    <tr>
+                        <td>Баварский крем (сливочно-апельсиновое желе)</td>
+                        <td>20,00</td>
+                    </tr>
+                    <tr>
+                        <td>Долма  азейбаржанская</td>
+                        <td>29,00</td>
+                    </tr>
+                    <tr>
+                        <td>Зефир вишнёвый</td>
+                        <td>13,00</td>
+                    </tr>
+                    <tr>
+                        <td>Зефир малиновый</td>
+                        <td>12,00</td>
+                    </tr>
+                    <tr>
+                        <td>Зефир яблочный</td>
+                        <td>9,00</td>
+                    </tr>
+                    <tr>
+                        <td>Израильский персиковый десерт  (персиковая пастила, взбитая со сливками)</td>
+                        <td>30,00</td>
+                    </tr>
+                    <tr>
+                        <td>Круасаны (1шт)</td>
+                        <td>13,00</td>
+                    </tr>
+                    <tr>
+                        <td>Львовский сырник</td>
+                        <td>20,00</td>
+                    </tr>
+                    <tr>
+                        <td>Мармелад  смородиновый</td>
+                        <td>14,00</td>
+                    </tr>
+                    <tr>
+                        <td>Мармелад  яблочный</td>
+                        <td>9,80</td>
+                    </tr>
+                    <tr>
+                        <td>Мороженое  ванильно-сливочное</td>
+                        <td>15,00</td>
+                    </tr>
+                    <tr>
+                        <td>Ореховые тарталетки с лимонным курдом (лимонным кремом)</td>
+                        <td>19,00</td>
+                    </tr>
+                    <tr>
+                        <td>Сочники</td>
+                        <td>14,00</td>
+                    </tr>
+                    <tr>
+                        <td>Толма  грузинская</td>
+                        <td>25,00</td>
+                    </tr>
+                    <tr>
+                        <td>Торт «Захер»</td>
+                        <td>22,00</td>
+                    </tr>
+                    <tr>
+                        <td>Торт «Шварцвальд» (сливочно-шоколадный)</td>
+                        <td>18,00</td>
+                    </tr>
+                    <tr>
+                        <td>Трюфель (белый шоколад)</td>
+                        <td>28,00</td>
+                    </tr>
+                    <tr>
+                        <td>Трюфель (чёрный шоколад)</td>
+                        <td>28,00</td>
+                    </tr>
+                    <tr>
+                        <td>Хачапури</td>
+                        <td>15,00</td>
+                    </tr>
+                    <tr>
+                        <td>Хлебный квас (1л)</td>
+                        <td>10,00</td>
+                    </tr>
+                    <tr>
+                        <td>Чебуреки</td>
+                        <td>12,00</td>
+                    </tr>
+                    <tr>
+                        <td>Чизкейк из 3-х видов шоколада</td>
+                        <td>25,00</td>
+                    </tr>
+                    <tr>
+                        <td>Шоколадные конфеты с начинкой из пралине</td>
+                        <td>30,00</td>
+                    </tr>
+                    <tr>
+                        <td>Эклеры</td>
+                        <td>16,00</td>
+                    </tr>
+                    <tr>
+                        <td>Яблочный квас (1л)</td>
+                        <td>13,00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="prices-content__text">Кондитерская «Вишенка» оставляет за собой право менять  данные  цены – если стоимость продуктов, из которых  изготавливаются кондитерские изделия, будут меняться от различных факторов.</p>
         </div>
-        <div class="screen footer">
-           <a name="contact"></a>
-            <div class="footer-top">
-                <div class="content">
-                    <h4 class="footer-top-content__heading">Get in Touch</h4>
-                    <p class="footer-top-content__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>sed do eiusmod tempor incididunt ut labore et dolore<br>magna aliqua.</p>
-                    <a href="mailto:help@yomuma.com" class="footer-top-content__mail">help@yomuma.com</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="content">
-                    <p class="footer-bottom-content__p">Ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    <br>
-                    <p class="copyright footer-bottom-content__p">Template created by <a href="http://blazrobar.com/">Blaz Robar</a>, HTML/CSS by <a href="https://github.com/platon-rov">Platon Rov</a>.<br> Contact me if you want - <a href="https://new.vk.com/blk_rov">new.vk.com/blk_rov</a> / <a href="mailto:platon.rov@gmail.com">platon.rov@gmail.com</a></p>
-                </div>
-            </div>
+    </div>
+    <div class="screen contact">
+    <div class="contact-content content clearfix">
+        <form action="" id="contact-form">
+            <input type="text" name="name" required="required" placeholder="Имя">
+            <input type="text" name="phone" required="required" placeholder="Телефон">
+            <textarea name="order" id="" cols="" rows="" placeholder="Ваш заказ"></textarea>
+            <input type="submit" value="Сделать заказ" id="order-submit">
+        </form>
+        <div class="contact-content-text">
+            <h2 class="contact-content__number">0562 46 01 46</h2>
+        <h2 class="contact-content__number">066 308 18 59</h2>
+        <h2 class="contact-content__adress">г. Днепр, ул. Олеся Гончара 6/14</h2>
+        <h2 class="contact-content__mail">ppokotilov@gmail.com </h2>
         </div>
-    </body>
-</html>
+    </div>
+    </div>
+    <footer></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="js/jquery.masonry.min.js"></script>
+		<script src="js/jquery.history.js"></script>
+		<script src="js/js-url.min.js"></script>
+		<script src="js/jquerypp.custom.js"></script>
+		<script src="js/gamma.js"></script>
+		<script type="text/javascript">
+			
+			$(function() {
+
+				var GammaSettings = {
+						// order is important!
+						viewport : [ {
+							width : 1200,
+							columns : 5
+						}, {
+							width : 900,
+							columns : 5
+						}, {
+							width : 500,
+							columns : 3
+						}, { 
+							width : 320,
+							columns : 2
+						}, { 
+							width : 0,
+							columns : 2
+						} ]
+				};
+
+				Gamma.init( GammaSettings, fncallback );
+
+
+				// Example how to add more items (just a dummy):
+
+				var page = 0,
+					items = ['<li><div data-alt="img03" data-description="<h3>Щербет со свежей папайи</h3>" data-max-width="1800" data-max-height="1350"><div data-src="images/xxxl/scherber_pap.jpg" data-min-width="1300"></div><div data-src="images/xxl/scherber_pap.jpg" data-min-width="1000"></div><div data-src="images/xl/scherber_pap.jpg" data-min-width="700"></div><div data-src="images/l/scherber_pap.jpg" data-min-width="300"></div><div data-src="images/m/scherber_pap.jpg" data-min-width="200"></div><div data-src="images/s/scherber_pap.jpg" data-min-width="140"></div><div data-src="images/xs/scherber_pap.jpg"></div><noscript><img src="images/xs/scherber_pap.jpg" alt="img03"/></noscript></div></li>']
+
+				function fncallback() {
+
+					$( '#loadmore' ).show().on( 'click', function() {
+
+						++page;
+						var newitems = items[page-1]
+						if( page <= 1 ) {
+							
+							Gamma.add( $( newitems ) );
+
+						}
+						if( page === 1 ) {
+
+							$( this ).remove();
+
+						}
+
+					} );
+
+				}
+
+			});
+
+		</script>
+</body>

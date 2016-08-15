@@ -1,0 +1,322 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.clearfix {
+    overflow: auto;
+    zoom: 1.0;
+}
+
+body {
+    background: url('/img/food.png');
+}
+
+.screen {
+}
+
+.content {
+    width: 85%;
+    margin: 0 auto;
+}
+
+p, li {
+    font-size: 18px;
+}
+
+.main {
+    height: 100vh;
+    background: url(/img/kitchen-main.jpg);
+    background-size: cover;
+}
+
+.main-logo {
+    width: 447px;
+    height: 425px;
+    border-radius: 450px;
+    margin: 0 auto;
+    margin-top: 125px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.main-logo__logo {
+    width: 450px;
+    height: 450px;
+    background-size: cover;
+}
+
+.about {
+    padding: 30px 0px;
+}
+
+.about-content__heading {
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.about-content__undertext {
+    height: 1px;
+    width: 620px;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    background: #444;
+}
+
+.about-content__text {
+    text-align: justify;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+}
+
+.about-images {
+    text-align: center;
+    line-height: 0px;
+}
+
+.about-images__item {
+    margin-right: 20px;
+}
+
+.about-images__item:last-child {
+    margin-right: 0px;
+}
+
+.author {
+    background: #fff;
+    padding: 30px 0px;
+}
+
+.author-content {
+    
+}
+
+.author-content-text {
+    display: inline-block;
+    max-width: 700px;
+    margin-top: 112px;
+}
+
+.author-content-heading {
+    display: inline-block;
+}
+
+.author-content__name {
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.author-content__post {
+    font-weight: normal;
+    display: inline-block;
+    font-style: italic;
+}
+
+.author-content__undertext {
+    height: 1px;
+    width: 370px;
+    margin: 30px 0px;
+    background: #444;
+}
+
+.author-content__about {
+    text-align: justify;
+}
+
+.author-content__image {
+    float: right;
+}
+
+.gamma-container {
+    margin-bottom: 30px;
+}
+
+.portfolio-content__heading {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.portfolio-content-undertext {
+    height: 1px;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    background: #444;
+}
+
+.portfolio-content-list {
+    margin: 0px 0px 30px 20px;
+    text-align: justify;
+    list-style-image: url(/img/list-marker.png);
+}
+
+.portfolio-content-list__item {
+    font-size: 22px;
+    text-align: center;
+}
+
+.portfolio-content__marker {
+    width: 18px;
+    height: 18px;
+    margin: 10px auto;
+    background: url(/img/list-marker.png);
+}
+
+.portfolio-content__p {
+    margin: 30px 0px;;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.portfolio-content-gallery {
+    text-align: center;
+    line-height: 0px;
+}
+
+.portfolio-content-gallery__item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.portfolio-content-gallery__item:nth-of-type(5n) {
+    margin-right: 0px;
+}
+
+.portfolio-content-gallery__item:nth-of-type(n+11) {
+    margin-bottom: 0px;
+}
+
+.portfolio-content-slider {
+    width: 60%;
+    height: 300px;
+    background: url(http://placehold.it/600x400);
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.prices {
+    background: #fff;
+}
+
+.prices-content__heading {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.prices-content-table {
+    margin: 0 auto;
+    border: 2px solid #eee;
+}
+
+td {
+    padding: 5px;
+    font-size: 20px;
+    border-bottom: 2px solid #eee;
+    border-top: 2px solid #eee;
+}
+
+td:nth-of-type(even) {
+    text-align: center;
+}
+
+.prices-content-table__head {
+    text-align: center;
+    font-size: 22px;
+}
+
+.prices-content-table__head td {
+    border: 2px solid #eee;
+}
+
+.prices-content__text {
+    margin: 30px 0px;
+    text-align: center;
+}
+
+.contact {
+    background: #fff;
+}
+
+.contact-content {
+    
+}
+
+input {
+    display: block;
+    width: 40%;
+    font-size: 24px;
+    margin: 30px auto;
+    border: none;
+    border-bottom: 3px solid #eee;
+    padding: 5px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-bottom: 3px solid #fac564;
+}
+
+textarea {
+    display: block;
+    width: 40%;
+    height: 158px;
+    resize: none;
+    margin: 0px auto;
+    font-size: 22px;
+    line-height: 1.2em;
+    border: none;
+    border-bottom: 3px solid #eee;
+    outline: none;
+}
+
+#order-submit {
+    width: 40%;
+    height: 50px;
+    line-height: 40px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 25px;
+    background: #eee;
+    cursor: pointer;
+}
+
+#order-submit:hover {
+    background: #fac564;
+}
+
+.contact-content-text {
+    text-align: center;
+}
+
+.contact-content__number {
+    font-weight: normal;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.contact-content__number:nth-of-type(1){
+    margin-right: 30px;
+}
+.contact-content__adress {
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    margin: 10px auto;
+}
+
+.contact-content__mail {
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+footer {
+    height: 10vh;
+    width: 100%;
+}
+

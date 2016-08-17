@@ -10,14 +10,20 @@
     <!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
 </head>
 <body>
+<ul class="header-menu header-menu--large">
+    <li class="header-menu__item"><a href="#about">О Нас</a></li>
+    <li class="header-menu__item"><a href="#author">Об Авторе</a></li>
+    <li class="header-menu__item"><a href="#menu">Меню</a></li>
+    <li class="header-menu__item"><a href="#prices">Цены</a></li>
+    <li class="header-menu__item order-button"><a href="#contact">Сделать заказ</a></li>
+</ul>
     <div class="screen main clearfix">
-        <header class="main-header">
-        </header>
         <div class="main-logo">
             <img src="/img/logo.png" alt="" class="main-logo__logo"> 
         </div>
     </div>
     <div class="screen about">
+        <a name="about"></a>
         <div class="about-content content">
             <h1 class="about-content__heading">Вкусно и полезно<br>с натуральными ингредиентами!</h1>
             <div class="about-content__undertext"></div>
@@ -31,11 +37,12 @@
         </div>
     </div>
     <div class="screen author">
+        <a name="author"></a>
         <div class="author-content content clearfix">
             <div class="author-content-text">
                 <div class="author-content-heading">
                     <h1 class="author-content__name">Ольга Покотилова</h1>
-                    <h2 class="author-content__post">Автор</h2>
+                    <h2 class="author-content__post">Автор кондитерских изделий</h2>
                 </div>
                 <div class="author-content__undertext"></div>
                 <p class="author-content__about">"Занимаюсь кулинарией с детского возраста – с 8-и лет. Так что опыт работы с всевозможными блюдами огромный. А сейчас я удовольствием провожу время на кухне, чтобы побаловать уже своих детей чем-то очень вкусненьким. Мои близкие и друзья – самые восторженные поклонники моей кухни. Они любезно рекомендуют  своим  знакомым  заказывать уникальные блюда к праздникам только у меня."</p>
@@ -44,6 +51,7 @@
         </div>
     </div>
     <div class="screen portfolio">
+        <a name="menu"></a>
         <div class="content portfolio-content">
             <h1 class="portfolio-content__heading">В кондитерской «Вишенка» вы можете заказать как  малоизвестные так и классические кондитерские изделия</h1>
             <div class="portfolio-content-undertext"></div>
@@ -282,6 +290,7 @@
         </div>
     </div>
     <div class="screen prices clearfix">
+        <a name="prices"></a>
         <div class="prices-content content">
            <h1 class="prices-content__heading">Меню и Цены</h1>
             <table class="prices-content-table">
@@ -447,6 +456,7 @@
     </div>
     <div class="screen contact">
     <div class="contact-content content clearfix">
+        <a name="contact"></a>
         <form action="" id="contact-form">
             <input type="text" name="name" required="required" placeholder="Имя">
             <input type="text" name="phone" required="required" placeholder="Телефон">
@@ -463,65 +473,60 @@
     </div>
     <footer></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<script src="js/jquery.masonry.min.js"></script>
-		<script src="js/jquery.history.js"></script>
-		<script src="js/js-url.min.js"></script>
-		<script src="js/jquerypp.custom.js"></script>
-		<script src="js/gamma.js"></script>
-		<script type="text/javascript">
-			
-			$(function() {
-
-				var GammaSettings = {
-						// order is important!
-						viewport : [ {
-							width : 1200,
-							columns : 5
-						}, {
-							width : 900,
-							columns : 5
-						}, {
-							width : 500,
-							columns : 3
-						}, { 
-							width : 320,
-							columns : 2
-						}, { 
-							width : 0,
-							columns : 2
-						} ]
-				};
-
-				Gamma.init( GammaSettings, fncallback );
-
-
-				// Example how to add more items (just a dummy):
-
-				var page = 0,
-					items = ['<li><div data-alt="img03" data-description="<h3>Щербет со свежей папайи</h3>" data-max-width="1800" data-max-height="1350"><div data-src="images/xxxl/scherber_pap.jpg" data-min-width="1300"></div><div data-src="images/xxl/scherber_pap.jpg" data-min-width="1000"></div><div data-src="images/xl/scherber_pap.jpg" data-min-width="700"></div><div data-src="images/l/scherber_pap.jpg" data-min-width="300"></div><div data-src="images/m/scherber_pap.jpg" data-min-width="200"></div><div data-src="images/s/scherber_pap.jpg" data-min-width="140"></div><div data-src="images/xs/scherber_pap.jpg"></div><noscript><img src="images/xs/scherber_pap.jpg" alt="img03"/></noscript></div></li>']
-
-				function fncallback() {
-
-					$( '#loadmore' ).show().on( 'click', function() {
-
-						++page;
-						var newitems = items[page-1]
-						if( page <= 1 ) {
-							
-							Gamma.add( $( newitems ) );
-
-						}
-						if( page === 1 ) {
-
-							$( this ).remove();
-
-						}
-
-					} );
-
-				}
-
-			});
-
+    <script src="js/jquery.masonry.min.js"></script>
+    <script src="js/jquery.history.js"></script>
+    <script src="js/js-url.min.js"></script>
+    <script src="js/jquerypp.custom.js"></script>
+    <script src="js/gamma.js"></script>
+    <script type="text/javascript">
+        $('a[href^="#"]').click(function(){
+        //Сохраняем значение атрибута href в переменной:
+        var target = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(target).offset().top}, 800);
+        return false;
+        });
+        $(document).on('scroll', function(){
+            if($(document).scrollTop()>300) {
+                $(".header-menu").removeClass('header-menu--large').addClass('header-menu--small');
+            } else {
+                $(".header-menu").removeClass('header-menu--small').addClass('header-menu--large')
+            }
+        });
+        $(function() {
+            var GammaSettings = {
+                    // order is important!
+                    viewport : [ {
+                        width : 1200,
+                        columns : 5
+                    }, {
+                        width : 900,
+                        columns : 5
+                    }, {
+                        width : 500,
+                        columns : 3
+                    }, { 
+                        width : 320,
+                        columns : 2
+                    }, { 
+                        width : 0,
+                        columns : 2
+                    } ]
+            };
+            Gamma.init( GammaSettings, fncallback );
+            var page = 0,
+                items = ['']
+            function fncallback() {
+                $( '#loadmore' ).show().on( 'click', function() {
+                    ++page;
+                    var newitems = items[page-1]
+                    if( page <= 1 ) {
+                        Gamma.add( $( newitems ) );
+                    }
+                    if( page === 1 ) {
+                        $( this ).remove();
+                    }
+                } );
+            }
+        });
 		</script>
 </body>

@@ -25,10 +25,110 @@ p, li {
     font-size: 18px;
 }
 
+.header-menu--large {
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: all 0.4s;
+}
+
+.header-menu__item {
+    display: inline-block;
+    font-size: 22px;
+    height: 70px;
+    line-height: 70px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    color: #fff;
+    transition: all 0.4s;
+}
+
+.header-menu__item:hover {
+    border-bottom: 3px solid #fac564;
+    color: #fac564;
+    transition: all 0s;
+}
+
+.order-button {
+    margin-right: 0px;
+    height: 60px;
+    line-height: 60px;
+    font-weight: bold;
+    background: transparent;
+    color: red;
+    border: 2px solid red;
+    margin-top: 5px;
+    transition: all 0.4s;
+}
+
+.order-button:hover {
+    border: 2px solid red;
+    background: red;
+    color: #fff;
+    transition: all 0s;
+}
+
+.header-menu--small {
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: all 0.4s;
+}
+
+.header-menu--small .header-menu__item {
+    display: inline-block;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    color: #fff;
+    transition: all 0.4s;
+}
+
+.header-menu--small .order-button {
+    margin-right: 0px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    background: transparent;
+    color: red;
+    border: 2px solid red;
+    margin-top: 5px;
+    transition: all 0.4s;
+}
+
+.header-menu--small .header-menu__item:hover {
+    border-bottom: 3px solid #fac564;
+    color: #fac564;
+    transition: all 0s;
+}
+
+.header-menu--small .order-button:hover {
+    border: 2px solid red;
+    background: red;
+    color: #fff;
+    transition: all 0s;
+}
+
+.header-menu__item a {
+    display: block;
+    padding: 0px 20px;
+    text-decoration: none;
+    color: inherit;
+}
+
 .main {
     height: 100vh;
     background: url(/img/kitchen-main.jpg);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .main-logo {
@@ -47,13 +147,12 @@ p, li {
 }
 
 .about {
-    padding: 30px 0px;
 }
 
 .about-content__heading {
     text-transform: uppercase;
     text-align: center;
-    line-height: 1.5em;
+    margin-top: 30px;
 }
 
 .about-content__undertext {
@@ -73,6 +172,7 @@ p, li {
 .about-images {
     text-align: center;
     line-height: 0px;
+    margin-bottom: 30px;
 }
 
 .about-images__item {

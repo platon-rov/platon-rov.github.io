@@ -10,10 +10,14 @@
 }
 
 body {
-    background: url('/img/food.png');
+    background: #fff;
 }
 
-.screen {
+.screen:nth-of-type(odd) {
+    background: url(/img/food.png)
+}
+.screen:nth-of-type(even) {
+    background: url(/img/cake_back.png);
 }
 
 .content {
@@ -71,6 +75,17 @@ p, li {
     transition: all 0s;
 }
 
+.header-menu__phone {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 70px;
+    display: inline-block;
+    transition: all 0.4s;
+}
+
 .header-menu--small {
     position: fixed;
     height: 40px;
@@ -117,6 +132,17 @@ p, li {
     transition: all 0s;
 }
 
+.header-menu--small .header-menu__phone {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 40px;
+    display: inline-block;
+    transition: all 0.4s;
+}
+
 .header-menu__item a {
     display: block;
     padding: 0px 20px;
@@ -126,9 +152,10 @@ p, li {
 
 .main {
     height: 100vh;
-    background: url(/img/kitchen-main.jpg);
+    background: url(/img/kitchen-main.jpg) !important;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed !important;
+    position: relative;
 }
 
 .main-logo {
@@ -147,6 +174,7 @@ p, li {
 }
 
 .about {
+    
 }
 
 .about-content__heading {
@@ -177,6 +205,10 @@ p, li {
 
 .about-images__item {
     margin-right: 20px;
+    width: 250px;
+    height: 150px;
+    background-size: contain;
+    border-radius: 5px;
 }
 
 .about-images__item:last-child {
@@ -189,17 +221,17 @@ p, li {
 }
 
 .author-content {
-    
 }
 
 .author-content-text {
-    display: inline-block;
-    max-width: 700px;
-    margin-top: 112px;
+    width: 700px;
+    position: relative;
+    margin: 0px auto;
 }
 
 .author-content-heading {
     display: inline-block;
+    margin-top: 10px;
 }
 
 .author-content__name {
@@ -226,8 +258,16 @@ p, li {
     text-align: justify;
 }
 
-.author-content__image {
-    float: right;
+.author-content-image {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-image: url(/img/author.jpg);
+    width: 130px;
+    height: 130px;
+    border-radius: 100px;
+    z-index: 1;
+    background-size: cover;
 }
 
 .gamma-container {
@@ -315,7 +355,7 @@ p, li {
 td {
     padding: 5px;
     font-size: 20px;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid #;
     border-top: 2px solid #eee;
 }
 
@@ -345,6 +385,12 @@ td:nth-of-type(even) {
     
 }
 
+.contact-content__heading {
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+}
+
 input {
     display: block;
     width: 40%;
@@ -354,6 +400,7 @@ input {
     border-bottom: 3px solid #eee;
     padding: 5px;
     outline: none;
+    background: rgba(255, 255, 255, 0.4);
 }
 
 input:focus, textarea:focus {
@@ -361,6 +408,7 @@ input:focus, textarea:focus {
 }
 
 textarea {
+    background: rgba(255, 255, 255, 0.4);
     display: block;
     width: 40%;
     height: 158px;
@@ -416,6 +464,8 @@ textarea {
 }
 
 footer {
+    background: url(/img/kitchen-main.jpg);
+    background-attachment: fixed;
     height: 10vh;
     width: 100%;
 }

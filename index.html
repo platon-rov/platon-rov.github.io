@@ -13,31 +13,30 @@
 <ul class="header-menu header-menu--large">
     <li class="header-menu__item"><a href="#about">О Нас</a></li>
     <li class="header-menu__item"><a href="#author">Об Авторе</a></li>
-    <li class="header-menu__item"><a href="#menu">Меню</a></li>
+    <li class="header-menu__item"><a href="#portfolio">Меню</a></li>
     <li class="header-menu__item"><a href="#prices">Цены</a></li>
     <li class="header-menu__item order-button"><a href="#contact">Сделать заказ</a></li>
+    <li class="header-menu__phone">+38 066 308 18 59</li>
 </ul>
     <div class="screen main clearfix">
         <div class="main-logo">
             <img src="/img/logo.png" alt="" class="main-logo__logo"> 
         </div>
     </div>
-    <div class="screen about">
-        <a name="about"></a>
+    <div class="screen about clearfix" id="about">
         <div class="about-content content">
             <h1 class="about-content__heading">Вкусно и полезно<br>с натуральными ингредиентами!</h1>
             <div class="about-content__undertext"></div>
             <p class="about-content__text">Мы все знаем, что еда должна быть натуральной. Потому кондитерская «Вишенка»  предлагает ассортимент блюд из свежих и правильных компонентов:  без  транс-жиров,  без маргарина и красителей! Без ванилина, который производится химическим путём. Без невкусных растительных сливок!  В любой кухне разных стран есть большой выбор приготовления питательных, приятных на вкус блюд, которые изготовлены из натуральных продуктов. Накрывая праздничный стол, хозяйки иногда отказываются от натуральности в пользу вкуса. Я предлагаю удачный компромисс - и ваши гости и, особенно, дети будут приятно удивлены тем блюдам, которые я изготовлю для вашего торжества!</p>
             <div class="about-images">
-                <img src="http://placehold.it/250x200" alt="" class="about-images__item">
-                <img src="http://placehold.it/250x200" alt="" class="about-images__item">
-                <img src="http://placehold.it/250x200" alt="" class="about-images__item">
-                <img src="http://placehold.it/250x200" alt="" class="about-images__item">
+                <img src="/img/cream.jpg" alt="" class="about-images__item">
+                <img src="/img/fruits.jpg" alt="" class="about-images__item">
+                <img src="img/parsley.jpg" alt="" class="about-images__item">
+                <img src="img/spice.jpg" alt="" class="about-images__item">
             </div>
         </div>
     </div>
-    <div class="screen author">
-        <a name="author"></a>
+    <div class="screen author" id="author">
         <div class="author-content content clearfix">
             <div class="author-content-text">
                 <div class="author-content-heading">
@@ -46,12 +45,11 @@
                 </div>
                 <div class="author-content__undertext"></div>
                 <p class="author-content__about">"Занимаюсь кулинарией с детского возраста – с 8-и лет. Так что опыт работы с всевозможными блюдами огромный. А сейчас я удовольствием провожу время на кухне, чтобы побаловать уже своих детей чем-то очень вкусненьким. Мои близкие и друзья – самые восторженные поклонники моей кухни. Они любезно рекомендуют  своим  знакомым  заказывать уникальные блюда к праздникам только у меня."</p>
+                <div class="author-content-image"></div>
             </div>
-            <img src="http://placehold.it/350x500" alt="" class="author-content__image">
         </div>
     </div>
-    <div class="screen portfolio">
-        <a name="menu"></a>
+    <div class="screen portfolio clearfix" id="portfolio">
         <div class="content portfolio-content">
             <h1 class="portfolio-content__heading">В кондитерской «Вишенка» вы можете заказать как  малоизвестные так и классические кондитерские изделия</h1>
             <div class="portfolio-content-undertext"></div>
@@ -289,8 +287,7 @@
 				</div>
         </div>
     </div>
-    <div class="screen prices clearfix">
-        <a name="prices"></a>
+    <div class="screen prices clearfix" id="prices">
         <div class="prices-content content">
            <h1 class="prices-content__heading">Меню и Цены</h1>
             <table class="prices-content-table">
@@ -454,22 +451,22 @@
             <p class="prices-content__text">Кондитерская «Вишенка» оставляет за собой право менять  данные  цены – если стоимость продуктов, из которых  изготавливаются кондитерские изделия, будут меняться от различных факторов.</p>
         </div>
     </div>
-    <div class="screen contact">
-    <div class="contact-content content clearfix">
-        <a name="contact"></a>
-        <form action="" id="contact-form">
-            <input type="text" name="name" required="required" placeholder="Имя">
-            <input type="text" name="phone" required="required" placeholder="Телефон">
-            <textarea name="order" id="" cols="" rows="" placeholder="Ваш заказ"></textarea>
-            <input type="submit" value="Сделать заказ" id="order-submit">
-        </form>
-        <div class="contact-content-text">
-            <h2 class="contact-content__number">0562 46 01 46</h2>
-        <h2 class="contact-content__number">066 308 18 59</h2>
-        <h2 class="contact-content__adress">г. Днепр, ул. Олеся Гончара 6/14</h2>
-        <h2 class="contact-content__mail">ppokotilov@gmail.com </h2>
+    <div class="screen contact clearfix" id="contact">
+        <div class="contact-content content">
+           <h1 class="contact-content__heading">Сделать заказ</h1>
+            <form action="" id="contact-form">
+                <input type="text" name="name" required="required" placeholder="Имя">
+                <input type="text" name="phone" required="required" placeholder="Телефон">
+                <textarea name="order" id="" cols="" rows="" placeholder="Ваш заказ" required="required"></textarea>
+                <input type="submit" value="Отправить" id="order-submit">
+            </form>
+            <div class="contact-content-text">
+                <h2 class="contact-content__number">0562 46 01 46</h2>
+            <h2 class="contact-content__number">066 308 18 59</h2>
+            <h2 class="contact-content__adress">г. Днепр, ул. Олеся Гончара 6/14</h2>
+            <h2 class="contact-content__mail">ppokotilov@gmail.com </h2>
+            </div>
         </div>
-    </div>
     </div>
     <footer></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -482,7 +479,7 @@
         $('a[href^="#"]').click(function(){
         //Сохраняем значение атрибута href в переменной:
         var target = $(this).attr('href');
-        $('html, body').animate({scrollTop: $(target).offset().top}, 800);
+        $('html, body').animate({scrollTop: $(target).offset().top-40}, 800);
         return false;
         });
         $(document).on('scroll', function(){
@@ -491,6 +488,19 @@
             } else {
                 $(".header-menu").removeClass('header-menu--small').addClass('header-menu--large')
             }
+        });
+        $(document).ready(function() {
+            $('#contact-form').submit(function() {
+                var form_data = $(this).serialize();
+                $.ajax({
+                    type: 'POST',
+                    url: 'send.php',
+                    data: form_data,
+                    success: function() {
+                       alert('Ваше сообщение отправлено!'); 
+                    }
+                });
+            })
         });
         $(function() {
             var GammaSettings = {

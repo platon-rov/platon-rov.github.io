@@ -454,9 +454,9 @@
     <div class="screen contact clearfix" id="contact">
         <div class="contact-content content">
            <h1 class="contact-content__heading">Сделать заказ</h1>
-            <form action="" id="contact-form">
+            <form action="" id="contact-form" method="">
                 <input type="text" name="name" required="required" placeholder="Имя">
-                <input type="text" name="phone" required="required" placeholder="Телефон">
+                <input type="tel" name="phone" required="required" placeholder="Телефон">
                 <textarea name="order" id="" cols="" rows="" placeholder="Ваш заказ" required="required"></textarea>
                 <input type="submit" value="Отправить" id="order-submit">
             </form>
@@ -464,11 +464,17 @@
                 <h2 class="contact-content__number">0562 46 01 46</h2>
             <h2 class="contact-content__number">066 308 18 59</h2>
             <h2 class="contact-content__adress">г. Днепр, ул. Олеся Гончара 6/14</h2>
-            <h2 class="contact-content__mail">ppokotilov@gmail.com </h2>
+            <h2 class="contact-content__mail"><a href="mailto:ppokotilov@gmail.com">ppokotilov@gmail.com </a></h2>
             </div>
         </div>
     </div>
-    <footer></footer>
+    <footer clearfix>
+        <div class="footer-content">
+            <p class="footer-content--element">Olga Pokotylova © 2016</p>
+            <p class="footer-content--element">Created by <a href="https://github.com/platon-rov">Platon Rov</a>. Using 
+            <a href="https://icons8.com/">icon8</a> / <a href="http://subtlepatterns.com/">subtlepatterns</a> / <a href="https://github.com/codrops/GammaGallery">GammaGallery</a></p>
+        </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="js/jquery.masonry.min.js"></script>
     <script src="js/jquery.history.js"></script>
@@ -488,19 +494,6 @@
             } else {
                 $(".header-menu").removeClass('header-menu--small').addClass('header-menu--large')
             }
-        });
-        $(document).ready(function() {
-            $('#contact-form').submit(function() {
-                var form_data = $(this).serialize();
-                $.ajax({
-                    type: 'POST',
-                    url: 'send.php',
-                    data: form_data,
-                    success: function() {
-                       alert('Ваше сообщение отправлено!'); 
-                    }
-                });
-            })
         });
         $(function() {
             var GammaSettings = {

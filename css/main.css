@@ -29,13 +29,21 @@ p, li {
     font-size: 18px;
 }
 
+.heading {
+    font-size: 32px;
+}
+
+.header-menu--mobile {
+    display: none;
+}
+
 .header-menu--large {
     position: fixed;
     height: 70px;
     width: 100%;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 2;
     transition: all 0.4s;
 }
 
@@ -58,8 +66,8 @@ p, li {
 
 .order-button {
     margin-right: 0px;
-    height: 60px;
-    line-height: 60px;
+    height: 50px;
+    line-height: 46px;
     font-weight: bold;
     background: transparent;
     color: red;
@@ -76,14 +84,13 @@ p, li {
 }
 
 .header-menu__phone {
-    position: absolute;
-    top: 0px;
-    right: 20px;
     color: #fff;
     font-size: 20px;
     line-height: 70px;
     display: inline-block;
     transition: all 0.4s;
+    float: right;
+    margin-right: 30px;
 }
 
 .header-menu--small {
@@ -92,7 +99,7 @@ p, li {
     width: 100%;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 2;
     transition: all 0.4s;
 }
 
@@ -110,7 +117,7 @@ p, li {
 .header-menu--small .order-button {
     margin-right: 0px;
     height: 30px;
-    line-height: 30px;
+    line-height: 26px;
     font-weight: bold;
     background: transparent;
     color: red;
@@ -125,6 +132,12 @@ p, li {
     transition: all 0s;
 }
 
+.header-menu__item.active {
+    border-bottom: 3px solid #fac564;
+    color: #fac564;
+    transition: all 0s;
+}
+
 .header-menu--small .order-button:hover {
     border: 2px solid red;
     background: red;
@@ -133,9 +146,8 @@ p, li {
 }
 
 .header-menu--small .header-menu__phone {
-    position: absolute;
-    top: 0px;
-    right: 20px;
+    float: right;
+    margin-right: 30px;
     color: #fff;
     font-size: 18px;
     line-height: 40px;
@@ -150,8 +162,13 @@ p, li {
     color: inherit;
 }
 
+.header-menu__item--active {
+    border-bottom: 3px solid #fac564;
+    color: #fac564 !important;
+    transition: all 0s !important;
+}
+
 .main {
-    height: 100vh;
     background: url(/img/kitchen-main.jpg) !important;
     background-size: cover;
     background-attachment: fixed !important;
@@ -162,8 +179,9 @@ p, li {
     width: 447px;
     height: 425px;
     border-radius: 450px;
-    margin: 0 auto;
+    margin: 0px auto;
     margin-top: 125px;
+    margin-bottom: 170px;
     background: rgba(0, 0, 0, 0.2);
 }
 
@@ -185,7 +203,7 @@ p, li {
 
 .about-content__undertext {
     height: 1px;
-    width: 620px;
+    width: 60%;
     margin: 0px auto;
     margin-bottom: 30px;
     background: #444;
@@ -249,7 +267,7 @@ p, li {
 
 .author-content__undertext {
     height: 1px;
-    width: 370px;
+    width: 50%;
     margin: 30px 0px;
     background: #444;
 }
@@ -272,6 +290,10 @@ p, li {
 
 .gamma-container {
     margin-bottom: 30px;
+}
+
+.gamma-description h3 {
+    font-weight: bold !important; 
 }
 
 .portfolio-content__heading {
@@ -355,7 +377,7 @@ p, li {
 td {
     padding: 5px;
     font-size: 20px;
-    border-bottom: 2px solid #;
+    border-bottom: 2px solid #eee;
     border-top: 2px solid #eee;
 }
 
@@ -397,14 +419,13 @@ input {
     font-size: 24px;
     margin: 30px auto;
     border: none;
-    border-bottom: 3px solid #eee;
     padding: 5px;
-    outline: none;
     background: rgba(255, 255, 255, 0.4);
 }
 
 input:focus, textarea:focus {
-    border-bottom: 3px solid #fac564;
+    border-right: 4px solid #fff;
+    background: rgba(255, 255, 255, 0.6);
 }
 
 textarea {
@@ -417,23 +438,25 @@ textarea {
     font-size: 22px;
     line-height: 1.2em;
     border: none;
-    border-bottom: 3px solid #eee;
     outline: none;
+    padding: 5px;
 }
 
 #order-submit {
     width: 40%;
     height: 50px;
-    line-height: 40px;
     border: none;
     text-transform: uppercase;
     font-size: 25px;
-    background: #eee;
     cursor: pointer;
+    background: transparent;
+    border: 3px solid #fff;
+    color: #fff;
 }
 
 #order-submit:hover {
-    background: #fac564;
+    background: #fff;
+    color: #000;
 }
 
 .contact-content-text {
@@ -449,6 +472,7 @@ textarea {
 .contact-content__number:nth-of-type(1){
     margin-right: 30px;
 }
+
 .contact-content__adress {
     text-align: center;
     font-weight: normal;
@@ -490,3 +514,188 @@ footer {
     text-decoration: none;
 }
 
+@media screen and (max-width: 1280px) {
+    
+    .about-images__item {
+        width: 150px;
+        height: 90px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .header-menu__item {
+        font-size: 16px;
+    }
+    
+    .header-menu__phone {
+        font-size: 16px;
+    }
+    
+    .order-button {
+        height: 44px;
+        line-height: 40px;
+    }
+    
+    .header-menu--small .header-menu__item {
+        font-size: 15px;
+    }
+    
+    .header-menu--small .header-menu__phone {
+        font-size: 15px;
+    }
+    
+    .header-menu--small .order-button {
+        height: 30px;
+        line-height: 26px;
+    }
+    
+    #contact-form input, #contact-form textarea, #contact-form #order-submit {
+        width: 60%;
+    }
+   }
+
+@media screen and (max-width: 870px) {
+    .heading {
+        font-size: 26px;
+    }
+    
+    .undertext {
+        width: 80%;
+    }
+    
+    .header-menu--mobile {
+        display: block;
+        position: fixed;
+        z-index: 3;
+        top: 20px;
+        left: 20px;
+        width: 70px;
+        height: 70px;
+        border-radius: 70px;
+        background: #000;
+    }
+    
+    .sw-topper {
+      position: relative;
+      top: 20px;
+      width: 50px;
+      height: 10px;
+      background: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: transform 0.5s, top 0.2s;
+      transition-delay: 0.2s, 0s;
+        margin: 0 auto;
+    }
+    
+    .sw-bottom {
+          position: relative;
+          width: 50px;
+          height: 10px;
+          top: 30px;
+          background: #fff;
+          border: none;
+          border-radius: 4px;
+          transition: transform 0.5s, top 0.2s;
+          transition-delay: 0.2s, 0s;
+        margin: 0 auto;
+    }
+    
+    .header-menu--mobile.active .sw-topper {
+        top: 30px;
+        transform: rotate(140deg);
+    }
+    
+    .header-menu--mobile.active .sw-bottom {
+        top: 20px;
+        transform: rotate(-140deg);
+    }
+    
+    .header-menu--large {
+        display: none;
+        height: auto;
+        background: rgba(0,0,0, 0.7);
+    }
+    
+    .header-menu__item {
+        display: block;
+        width: 250px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    
+    .order-button a {
+        display: block;
+        width: auto;
+    }
+    
+    .header-menu__phone {
+        display: block;
+        transition: all 0.4s;
+        float: none;
+        margin-right: 0px;
+        width: 100%;
+    }
+    
+    .header-menu--mobile.active ~ .header-menu--large {
+        display: block;
+    }
+    
+    .main {
+        height: 100vh;
+    }
+    
+    .main-logo {
+        width: 250px;
+        height: 238px;
+        margin-top: 175px;
+        
+    }
+
+    .main-logo__logo {
+        width: 250px;
+        height: 250px;
+        background-size: cover;
+    }
+    
+    .about-images {
+        display: none;
+    }
+    
+    .author-content-text {
+        width: 100%;
+        position: relative;
+        margin: 0px auto;
+    }
+    
+    .author-content-image {
+        position: relative;
+        margin: 0 auto;
+    }
+    
+    .author-content-heading {
+        display: block;
+        text-align: center;
+    }
+    
+    .author-content__post {
+        font-size: 22px;
+    }
+    
+    .gamma-description h3 {
+        font-size: 10px !important;
+    }
+    
+    .author-content__undertext {
+        width: 90%;
+        margin: 30px auto;
+    }
+    
+    #contact-form input, #contact-form textarea, #contact-form #order-submit {
+        width: 90%;
+    }
+    
+    .contact-content__number:nth-of-type(1){
+        margin-right: 0px;
+    }
+}

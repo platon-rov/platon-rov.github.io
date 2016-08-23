@@ -264,11 +264,11 @@ button.gamma-btn-sspause:before {
 /* Loaders */
 
 .gamma-loading {
-	background: transparent url(../images/loader_light.gif) no-repeat center center;
+	background: transparent url(../img/loader_light.gif) no-repeat center center;
 }
 
 .gamma-single-view.gamma-loading {
-	background: transparent url(../images/loader_dark.gif) no-repeat center center;
+	background: transparent url(../img/loader_dark.gif) no-repeat center center;
 }
 
 

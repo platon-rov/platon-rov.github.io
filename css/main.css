@@ -694,7 +694,9 @@ footer {
     #contact-form input, #contact-form textarea, #contact-form #order-submit {
         width: 90%;
     }
-    
+}
+
+@media screen and (max-width: 366px) {
     .contact-content__number:nth-of-type(1){
         margin-right: 0px;
     }

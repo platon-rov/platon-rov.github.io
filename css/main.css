@@ -569,17 +569,17 @@ footer {
         z-index: 3;
         top: 20px;
         left: 20px;
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
         border-radius: 70px;
         background: #000;
     }
     
     .sw-topper {
       position: relative;
-      top: 20px;
-      width: 50px;
-      height: 10px;
+      top: 15px;
+      width: 40px;
+      height: 5px;
       background: #fff;
       border: none;
       border-radius: 4px;
@@ -590,9 +590,9 @@ footer {
     
     .sw-bottom {
           position: relative;
-          width: 50px;
-          height: 10px;
-          top: 30px;
+          width: 40px;
+          height: 5px;
+          top: 25px;
           background: #fff;
           border: none;
           border-radius: 4px;
@@ -602,12 +602,12 @@ footer {
     }
     
     .header-menu--mobile.active .sw-topper {
-        top: 30px;
+        top: 23px;
         transform: rotate(140deg);
     }
     
     .header-menu--mobile.active .sw-bottom {
-        top: 20px;
+        top: 18px;
         transform: rotate(-140deg);
     }
     

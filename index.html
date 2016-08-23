@@ -505,23 +505,25 @@
     <script src="js/gamma.js"></script>
     <script type="text/javascript">
         $(document).scroll(function() {
-            var window_top = $(window).scrollTop();
-            var about = $('#about').offset().top;
-            var author = $('#author').offset().top;
-            var portfolio = $('#portfolio').offset().top;
-            var prices = $('#prices').offset().top;
-            var contact = $('#contact').offset().top;
-            $('.header-menu__item').removeClass('active');
-            if(window_top > about && window_top < author) {
-                $('.header-menu__item a[href="#about"]').parent('.header-menu__item').addClass('active');
-            } else if (window_top > author && window_top < portfolio) {
-                $('.header-menu__item a[href="#author"]').parent('.header-menu__item').addClass('active');
-            } else if (window_top > portfolio && window_top < prices) {
-                $('.header-menu__item a[href="#portfolio"]').parent('.header-menu__item').addClass('active');
-            } else if (window_top > prices && window_top < contact) {
-                $('.header-menu__item a[href="#prices"]').parent('.header-menu__item').addClass('active');
-            } else if (window_top > contact) {
-                $('.header-menu__item a[href="#prices"]').parent('.header-menu__item').removeClass('active');
+            if($(window).width() > 870) {
+                var window_top = $(window).scrollTop();
+                var about = $('#about').offset().top;
+                var author = $('#author').offset().top;
+                var portfolio = $('#portfolio').offset().top;
+                var prices = $('#prices').offset().top;
+                var contact = $('#contact').offset().top;
+                $('.header-menu__item').removeClass('active');
+                if(window_top > about && window_top < author) {
+                    $('.header-menu__item a[href="#about"]').parent('.header-menu__item').addClass('active');
+                } else if (window_top > author && window_top < portfolio) {
+                    $('.header-menu__item a[href="#author"]').parent('.header-menu__item').addClass('active');
+                } else if (window_top > portfolio && window_top < prices) {
+                    $('.header-menu__item a[href="#portfolio"]').parent('.header-menu__item').addClass('active');
+                } else if (window_top > prices && window_top < contact) {
+                    $('.header-menu__item a[href="#prices"]').parent('.header-menu__item').addClass('active');
+                } else if (window_top > contact) {
+                    $('.header-menu__item a[href="#prices"]').parent('.header-menu__item').removeClass('active');
+                }
             }
         });
         $(document).ready(function(){

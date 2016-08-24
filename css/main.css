@@ -85,12 +85,13 @@ p, li {
 
 .header-menu__phone {
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 70px;
     display: inline-block;
     transition: all 0.4s;
-    float: right;
-    margin-right: 30px;
+    position: absolute;
+    height: 70px;
+    right: 20px;
 }
 
 .header-menu--small {
@@ -146,13 +147,12 @@ p, li {
 }
 
 .header-menu--small .header-menu__phone {
-    float: right;
-    margin-right: 30px;
     color: #fff;
     font-size: 18px;
     line-height: 40px;
     display: inline-block;
     transition: all 0.4s;
+    height: 40px;
 }
 
 .header-menu__item a {
@@ -514,26 +514,37 @@ footer {
     text-decoration: none;
 }
 
-@media screen and (max-width: 1280px) {
-    
+@media screen and (max-width: 1280px) { 
     .about-images__item {
         width: 150px;
         height: 90px;
     }
 }
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1200px) { 
     .header-menu__item {
         font-size: 16px;
+        transition: all 0.4s;
     }
     
     .header-menu__phone {
-        font-size: 16px;
+        font-size: 14px;
+        transition: all 0.4s;
     }
-    
     .order-button {
         height: 44px;
         line-height: 40px;
+        transition: all 0.4s;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .header-menu__phone {
+        position: relative;
+        right: 0px;
+        float: right;
+        margin-right: 10px;
+        transition: all 0.4s;
     }
     
     .header-menu--small .header-menu__item {
@@ -548,7 +559,6 @@ footer {
         height: 30px;
         line-height: 26px;
     }
-    
     #contact-form input, #contact-form textarea, #contact-form #order-submit {
         width: 60%;
     }
@@ -574,6 +584,10 @@ footer {
         border-radius: 70px;
         background: #000;
     }
+    
+    .header-menu--mobile ~ .header-menu--large, .header-menu--mobile ~ .header-menu--small {
+        display: none;
+    } 
     
     .sw-topper {
       position: relative;
@@ -612,7 +626,6 @@ footer {
     }
     
     .header-menu--large {
-        display: none;
         height: auto;
         background: rgba(0,0,0, 0.7);
     }
@@ -630,11 +643,11 @@ footer {
     }
     
     .header-menu__phone {
-        display: block;
         transition: all 0.4s;
         float: none;
         margin-right: 0px;
         width: 100%;
+        display: none;
     }
     
     .header-menu--mobile.active ~ .header-menu--large {

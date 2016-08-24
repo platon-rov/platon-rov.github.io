@@ -504,32 +504,58 @@
     <script src="js/jquerypp.custom.js"></script>
     <script src="js/gamma.js"></script>
     <script type="text/javascript">
-        $(document).scroll(function() {
-            if($(window).width() > 870) {
-                var window_top = $(window).scrollTop();
-                var about = $('#about').offset().top;
-                var author = $('#author').offset().top;
-                var portfolio = $('#portfolio').offset().top;
-                var prices = $('#prices').offset().top;
-                var contact = $('#contact').offset().top;
-                $('.header-menu__item').removeClass('active');
-                if(window_top > about && window_top < author) {
-                    $('.header-menu__item a[href="#about"]').parent('.header-menu__item').addClass('active');
-                } else if (window_top > author && window_top < portfolio) {
-                    $('.header-menu__item a[href="#author"]').parent('.header-menu__item').addClass('active');
-                } else if (window_top > portfolio && window_top < prices) {
-                    $('.header-menu__item a[href="#portfolio"]').parent('.header-menu__item').addClass('active');
-                } else if (window_top > prices && window_top < contact) {
-                    $('.header-menu__item a[href="#prices"]').parent('.header-menu__item').addClass('active');
-                } else if (window_top > contact) {
-                    $('.header-menu__item a[href="#prices"]').parent('.header-menu__item').removeClass('active');
-                }
+        function highlight() {
+            var window_top = $(window).scrollTop()+41;
+            var about = $('#about').offset().top;
+            var author = $('#author').offset().top;
+            var portfolio = $('#portfolio').offset().top;
+            var prices = $('#prices').offset().top;
+            var contact = $('#contact').offset().top;
+            $('.header-menu__item').removeClass('active');
+            if(window_top > about && window_top < author) {
+                $('.header-menu__item a[href="#about"]').parent('.header-menu__item').addClass('active');
+            } else if (window_top > author && window_top < portfolio) {
+                $('.header-menu__item a[href="#author"]').parent('.header-menu__item').addClass('active');
+            } else if (window_top > portfolio && window_top < prices) {
+                $('.header-menu__item a[href="#portfolio"]').parent('.header-menu__item').addClass('active');
+            } else if (window_top > prices && window_top < contact) {
+                $('.header-menu__item a[href="#prices"]').parent('.header-menu__item').addClass('active');
+            } else if (window_top > contact) {
+                $('.header-menu__item a[href="#prices"]').parent('.header-menu__item').removeClass('active');
             }
-        });
+        };
         $(document).ready(function(){
+            if($(window).width() > 870 && $(document).scrollTop() > 300) {
+                $(".header-menu").removeClass('header-menu--large').addClass('header-menu--small');
+            }
+            if($(window).width() > 870) {
+                highlight();
+            }
             $(".header-menu--mobile").click(function () {
-              $(this).toggleClass("active");
+                $(this).toggleClass("active");
             });
+        });
+        $(document).on('scroll', function(){
+            highlight();
+            if($(document).scrollTop()>300 && $(window).width() > 870) {
+                $(".header-menu").removeClass('header-menu--large').addClass('header-menu--small');
+            } else {
+                $(".header-menu").removeClass('header-menu--small').addClass('header-menu--large');
+            };
+        });
+        $(window).resize(function() {
+            if($(window).width() < 870) {
+                $(".header-menu").removeClass('header-menu--small').addClass('header-menu--large');
+            }
+            if($(window).width() > 870 && $(document).scrollTop() > 300) {
+                highlight();
+                $(".header-menu").removeClass('header-menu--large').addClass('header-menu--small');
+            }
+            if($(window).width() < 870) {
+                $('.header-menu__item').each(function() {
+                    $(this).removeClass('active');
+                });
+            }
         });
         $('a[href^="#"]').click(function(){
             var target = $(this).attr('href');
@@ -541,13 +567,6 @@
             }
             $('html, body').animate({scrollTop: $(target).offset().top-offset}, 800);
             return false;
-        });
-        $(document).on('scroll', function(){
-            if($(document).scrollTop()>300 && $(window).width() > 870) {
-                $(".header-menu").removeClass('header-menu--large').addClass('header-menu--small');
-            } else {
-                $(".header-menu").removeClass('header-menu--small').addClass('header-menu--large');
-            };
         });
         $(function() {
             var GammaSettings = {

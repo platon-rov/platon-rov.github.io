@@ -639,7 +639,7 @@ footer {
     }
     
     .main {
-        height: 90vh;
+        height: 100vh;
     }
     
     .main-logo {
@@ -714,5 +714,14 @@ footer {
 @media screen and (max-width: 366px) {
     .contact-content__number:nth-of-type(1){
         margin-right: 0px;
+    }
+}
+
+@media screen and (max-height: 480px) {
+    
+    .main-logo {
+        width: 250px;
+        height: 238px;
+        margin-top: 25px;
     }
 }

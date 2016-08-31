@@ -38,13 +38,13 @@
             <div class="sw-bottom"></div>
         </div>
         <ul class="header-menu header-menu--large clearfix">
-        <li class="header-menu__item"><a href="#about">О Нас</a></li>
-        <li class="header-menu__item"><a href="#author">Об Авторе</a></li>
-        <li class="header-menu__item"><a href="#portfolio">Меню</a></li>
-        <li class="header-menu__item"><a href="#prices">Цены</a></li>
-        <li class="header-menu__item order-button"><a href="#contact">Сделать заказ</a></li>
-        <li class="header-menu__phone">+38 066 308 18 59</li>
-    </ul>
+            <li class="header-menu__item"><a href="#about">О Нас</a></li>
+            <li class="header-menu__item"><a href="#author">Об Авторе</a></li>
+            <li class="header-menu__item"><a href="#portfolio">Меню</a></li>
+            <li class="header-menu__item"><a href="#prices">Цены</a></li>
+            <li class="header-menu__item order-button"><a href="#contact">Сделать заказ</a></li>
+            <li class="header-menu__phone">+38 066 308 18 59</li>
+        </ul>
         <div class="screen main clearfix">
             <div class="main-logo">
                 <img src="/img/logo.png" alt="" class="main-logo__logo"> 
@@ -483,7 +483,7 @@
                <h1 class="contact-content__heading heading">Сделать заказ</h1>
                 <form action="" id="contact-form" method="">
                     <input type="text" name="name" required="required" placeholder="Имя">
-                    <input type="tel" name="phone" required="required" placeholder="Телефон">
+                    <input id="contact-tel" type="tel" name="phone" required="required" placeholder="Телефон">
                     <textarea name="order" id="" cols="" rows="" placeholder="Ваш заказ" required="required"></textarea>
                     <input type="submit" value="Отправить" id="order-submit">
                 </form>
@@ -508,7 +508,8 @@
         <script src="js/js-url.min.js"></script>
         <script src="js/jquerypp.custom.js"></script>
         <script src="js/gamma.js"></script>
-        <script type="text/javascript">
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script type="text/javascript" type="text/javascript">
             function highlight() {
                 var window_top = $(window).scrollTop()+41;
                 var about = $('#about').offset().top;
@@ -539,6 +540,17 @@
                 $(".header-menu--mobile").click(function () {
                     $(this).toggleClass("active");
                 });
+                $('#contact-form').submit(function() {
+                    var form_data = $(this).serialize();
+                    $.ajax({
+                        type: "POST",
+                        url: "send.php",
+                        data: form_data, 
+                        success: function() {
+                            alert("Ваше сообщение отправлено!");
+                        }
+                    });
+                });
             });
             $(document).on('scroll', function(){
                 highlight();
@@ -561,6 +573,9 @@
                         $(this).removeClass('active');
                     });
                 }
+            });
+            jQuery(function($){
+                $("#contact-tel").mask("+38 (999) 999 99 99");
             });
             $('a[href^="#"]').click(function(){
                 var target = $(this).attr('href');
@@ -609,6 +624,6 @@
                     } );
                 }
             });
-            </script>
+        </script>
     </body>
 </html>

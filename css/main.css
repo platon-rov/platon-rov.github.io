@@ -648,6 +648,7 @@ footer {
         position: relative;
         top: 50%;
         margin-top: -125px;
+        margin-bottom: 0px;
     }
     
     .order-button a {
@@ -714,17 +715,5 @@ footer {
 @media screen and (max-width: 366px) {
     .contact-content__number:nth-of-type(1){
         margin-right: 0px;
-    }
-}
-
-@media screen and (max-height: 800px) {
-    .main {
-        height: auto;
-    }
-    
-    .main-logo {
-        width: 250px;
-        height: 238px;
-        margin: 75px auto;
     }
 }

@@ -559,6 +559,15 @@ footer {
         height: 30px;
         line-height: 26px;
     }
+    
+    .main-logo {
+        width: 250px;
+        height: 238px;
+        position: relative;
+        top: 50%;
+        margin-top: -125px;
+    }
+    
     #contact-form input, #contact-form textarea, #contact-form #order-submit {
         width: 60%;
     }
@@ -661,9 +670,7 @@ footer {
     .main-logo {
         width: 250px;
         height: 238px;
-        position: relative;
-        top: 50%;
-        margin-top: -125px;
+        margin-top: 50px;
     }
 
     .main-logo__logo {

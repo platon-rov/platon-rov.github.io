@@ -661,8 +661,9 @@ footer {
     .main-logo {
         width: 250px;
         height: 238px;
-        margin-top: 33%;
-        
+        position: relative;
+        top: 50%;
+        margin-top: -125px;
     }
 
     .main-logo__logo {

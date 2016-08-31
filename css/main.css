@@ -662,16 +662,6 @@ footer {
     .header-menu--mobile.active ~ .header-menu--large {
         display: block;
     }
-    
-    .main {
-        height: 100vh;
-    }
-    
-    .main-logo {
-        width: 250px;
-        height: 238px;
-        margin-top: 50px;
-    }
 
     .main-logo__logo {
         width: 250px;

@@ -725,6 +725,6 @@ footer {
     .main-logo {
         width: 250px;
         height: 238px;
-        margin-top: 25px;
+        margin: 75px auto;
     }
 }

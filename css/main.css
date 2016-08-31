@@ -560,14 +560,6 @@ footer {
         line-height: 26px;
     }
     
-    .main-logo {
-        width: 250px;
-        height: 238px;
-        position: relative;
-        top: 50%;
-        margin-top: -125px;
-    }
-    
     #contact-form input, #contact-form textarea, #contact-form #order-submit {
         width: 60%;
     }
@@ -644,6 +636,18 @@ footer {
         width: 250px;
         margin: 0 auto;
         margin-bottom: 10px;
+    }
+    
+    .main {
+        max-height: 100vh;
+    }
+    
+    .main-logo {
+        width: 250px;
+        height: 238px;
+        position: relative;
+        top: 50%;
+        margin-top: -125px;
     }
     
     .order-button a {

@@ -565,7 +565,7 @@ footer {
     }
    }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 840px) {
     .heading {
         font-size: 26px;
     }
@@ -717,8 +717,7 @@ footer {
     }
 }
 
-@media screen and (max-height: 480px) {
-    
+@media screen and (max-width: 480px) {
     .main-logo {
         width: 250px;
         height: 238px;

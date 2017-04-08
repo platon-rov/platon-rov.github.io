@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		 <meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" 
+				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+				crossorigin="anonymous">
+		</script>
+
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+		<link href="https://fonts.googleapis.com/css?family=Philosopher:400,700&amp;subset=cyrillic" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Jura:400,500,600" rel="stylesheet"> 
+
+		<link rel="stylesheet" href="css/photo-hover.css">
+		<link rel="stylesheet" href="css/menu.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+
+		<!-- для вспылвающих фото -->
+		<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+		<link rel="stylesheet" href="css/magnific-popup.css">
+
+		<style>
+			.main-loader-container {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: #373a47;
+				z-index: 100500;
+			}
+
+			.main-loader-wrapper {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -75px;
+				margin-top: -150px;
+			}
+
+			@-webkit-keyframes rotate {
+			  0% {
+			    -webkit-transform: rotate(0deg);
+			            transform: rotate(0deg);
+			  }
+			  50% {
+			    -webkit-transform: rotate(180deg);
+			            transform: rotate(180deg);
+			  }
+			  100% {
+			    -webkit-transform: rotate(360deg);
+			            transform: rotate(360deg);
+			  }
+			}
+			@keyframes rotate {
+			  0% {
+			    -webkit-transform: rotate(0deg);
+			            transform: rotate(0deg);
+			  }
+			  50% {
+			    -webkit-transform: rotate(180deg);
+			            transform: rotate(180deg);
+			  }
+			  100% {
+			    -webkit-transform: rotate(360deg);
+			            transform: rotate(360deg);
+			  }
+			}
+			@-webkit-keyframes rotate2 {
+			  0% {
+			    -webkit-transform: rotate(0deg);
+			            transform: rotate(0deg);
+			    border-top-color: rgba(255, 255, 255, 0.5);
+			  }
+			  50% {
+			    -webkit-transform: rotate(180deg);
+			            transform: rotate(180deg);
+			    border-top-color: rgba(255, 255, 255, 0.5);
+			  }
+			  100% {
+			    -webkit-transform: rotate(360deg);
+			            transform: rotate(360deg);
+			    border-top-color: rgba(255, 255, 255, 0.5);
+			  }
+			}
+			@keyframes rotate2 {
+			  0% {
+			    -webkit-transform: rotate(0deg);
+			            transform: rotate(0deg);
+			    border-top-color: rgba(255, 255, 255, 0.5);
+			  }
+			  50% {
+			    -webkit-transform: rotate(180deg);
+			            transform: rotate(180deg);
+			    border-top-color: rgba(255, 255, 255, 0.5);
+			  }
+			  100% {
+			    -webkit-transform: rotate(360deg);
+			            transform: rotate(360deg);
+			    border-top-color: rgba(255, 255, 255, 0.5);
+			  }
+			}
+			* {
+			  box-sizing: border-box;
+			}
+
+			#main-loader {
+			  position: relative;
+			  margin: 75px auto;
+			  width: 150px;
+			  height: 150px;
+			  display: block;
+			  overflow: hidden;
+			}
+
+			#main-loader div {
+			  height: 100%;
+			}
+
+			/* loader 4 */
+			#main-loader, #main-loader div {
+			  border-radius: 50%;
+			  padding: 8px;
+			  border: 2px solid transparent;
+			  -webkit-animation: rotate linear 3.5s infinite;
+			          animation: rotate linear 3.5s infinite;
+			  border-radius: 50%;
+			  padding: 4px;
+			  -webkit-animation: rotate2 4s infinite linear;
+			          animation: rotate2 4s infinite linear;
+			}
+
+			.loader {
+			  will-change: transform;
+			}
+		</style>
+	</head>
+	<body>	
+		<div class="main-loader-container">
+			<div class="main-loader-wrapper">
+				<div id="main-loader" class="loader">
+				  <div>
+				    <div>
+				      <div>
+				        <div>
+				          <div>
+				            <div>
+				              <div>
+				                <div>
+				                  <div>
+				                    <div></div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>	
+		</div>
+
+		<div class="modal fade" id="callback">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" data-dismiss="modal" class="close-modal">&times;</button>
+						<h2 class="modal-title title">Заказать звонок</h2>
+					</div>
+					<div class="modal-body">
+						<form action="" id="callback-form">
+							<div class="form-group">
+								<label for="callback-name">Ваше имя</label>
+								<input type="text" id="callback-name" class="form-control">
+							</div>
+							<div class="form-group callback-phone-body">
+								<label for="callback-phone">Ваш телефон</label>
+								<input type="text" class="form-control" id="callback-phone">
+								<label for="callback-phone-time">Когда позвонить?</label>
+								<input type="text" class="form-control" id="callback-phone-time">
+							</div>
+							<div class="form-group callback-email-body">
+								<label for="callback-email">Ваш email</label>
+								<input type="text" class="form-control" id="callback-email">
+							</div>
+							<div class="form-group callback-link-wrapper">
+								<a href="#" class="callback-link">Напишите мне</a>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+				        <button type="button" class="callme-button">Отправить</button>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-wrap" id="nav-menu">
+			<nav class="menu">
+				<div class="icon-list">
+					<a href="#about-us-ref" class="menu-link-ref"><span>О Нас</span></a>
+					<a href="#construct-ref" class="menu-link-ref"><span>Продукция</span></a>
+					<a href="#service-ref" class="menu-link-ref"><span>Сервисы</span></a>
+					<a href="#contacts-ref" class="menu-link-ref"><span>Контакты</span></a>
+				</div>
+			</nav>
+			<button class="close-button" id="close-button">Close Menu</button>
+		</div>
+		<button class="menu-button" id="open-button"></button>
+		<button class="callback-button glyphicon glyphicon-earphone" href="#callback" data-toggle="modal"></button>
+		<div class="content-wrap">
+			<div class="content">
+				<div class="container-fluid screen main">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							<h1 class="main-title title">
+								<div id="particle-slider">
+									<div class="controls">
+										<div class="left" data-src="img-gif-prev-triangle.gif"></div>
+										<div class="right" data-src="img-gif-next-triangle.gif"></div>
+									</div>
+									<div class="slides">
+										<div class="slide" data-src="image/main-logo-small.png" ></div>
+									</div>
+									<canvas class="draw"></canvas>
+								</div>
+							</h1>
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid screen product">
+					<div class="row product-row">
+						<div class="col-xs-6 col-md-4 col-sm-4 product-column">
+							<div class="grid">
+								<figure class="effect-lily">
+									<img src="image/rose-red.jpg" alt="">
+									<figcaption>
+										<div>
+											<h2>Reine Rose</h2>
+											<p>Exclusive package for flowers</p>
+										</div>
+										<a class="image-popup" href="image/rose-red.jpg">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+						<div class="col-xs-6 col-md-4 col-sm-4 product-column">
+							<div class="grid">
+								<figure class="effect-lily">
+									<img src="image/rose-red.jpg" alt="">
+									<figcaption>
+										<div>
+											<h2>Reine Rose</h2>
+											<p>Exclusive package for flowers</p>
+										</div>
+										<a class="image-popup" href="image/rose-red.jpg">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+						<div class="col-xs-6 col-md-4 col-sm-4 product-column">
+							<div class="grid">
+								<figure class="effect-lily">
+									<img src="image/rose-red.jpg" alt="">
+									<figcaption>
+										<div>
+											<h2>Reine Rose</h2>
+											<p>Exclusive package for flowers</p>
+										</div>
+										<a class="image-popup" href="image/rose-red.jpg">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+						<div class="col-xs-6 col-md-4 col-sm-4 product-column">
+							<div class="grid">
+								<figure class="effect-lily">
+									<img src="image/rose-red.jpg" alt="">
+									<figcaption>
+										<div>
+											<h2>Reine Rose</h2>
+											<p>Exclusive package for flowers</p>
+										</div>
+										<a class="image-popup" href="image/rose-red.jpg">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+						<div class="col-xs-6 col-md-4 col-sm-4 product-column unvisible-small">
+							<div class="grid">
+								<figure class="effect-lily">
+									<img src="image/rose-red.jpg" alt="">
+									<figcaption>
+										<div>
+											<h2>Reine Rose</h2>
+											<p>Exclusive package for flowers</p>
+										</div>
+										<a class="image-popup" href="image/rose-red.jpg">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+						<div class="col-xs-6 col-md-4 col-sm-4 product-column unvisible-small">
+							<div class="grid">
+								<figure class="effect-lily">
+									<img src="image/rose-red.jpg" alt="">
+									<figcaption>
+										<div>
+											<h2>Reine Rose</h2>
+											<p>Exclusive package for flowers</p>
+										</div>
+										<a class="image-popup" href="image/rose-red.jpg">View more</a>
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+						<button class="product-show-more"><span>Показать еще</span></button>
+					</div>
+				</div>
+				<div class="container screen about-us" id="about-us-ref">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1 about-us-column">
+							<h2 class="about-us-title title">О Нас</h2>
+							<!-- about us text -->
+							<div class="col-md-10 col-md-offset-1 about-us-text">Мы - компания со своим взглядом на мир упаковки.
+								Наши работы индивидуальны и не для всех, как и наши клиенты.
+								Наша компания  не производит типовую массовую упаковку.
+								У Вас есть идея! У нас Вы найдете решение.
+								Нет конкретики в мыслях, а красивую  коробку 
+								все-равно хочется?- Мы любим нетипичные проекты.
+								Смелее! No box - создадим настроение вместе.
+								<h5 class="about-us-subtitle title">Подарочная упаковка - Эксклюзивная упаковка - премиальная упаковка</h5>
+							</div>
+							<!-- end about us text -->
+						</div>
+					</div>
+				</div>
+				<div class="container screen construct" id="construct-ref">
+					<div class="row">
+						<div class="col-md-12 construct-column">
+							<h2 class="construct-title title">Продукция</h2>
+							<div class="container construct-examples">
+								<!-- constuct examples -->
+								<div class="row">
+									<div class="col-xs-6 col-sm-4 col-md-4"><a href="image/high/book.jpg" class="image-popup"><img src="image/high/book.jpg" alt="" class="construct-image"></a></div>
+									<div class="col-xs-6 col-sm-4 col-md-4"><a href="image/high/book-tape.jpg" class="image-popup"><img src="image/high/book-tape.jpg" alt="" class="construct-image"></a></div>
+									<div class="col-xs-6 col-sm-4 col-md-4"><a href="image/high/case.jpg" class="image-popup"><img src="image/high/case.jpg" alt="" class="construct-image"></a></div>
+									<div class="col-xs-6 col-sm-4 col-md-4"><a href="image/high/folder.jpg" class="image-popup"><img src="image/high/folder.jpg" alt="" class="construct-image"></a></div>
+									<div class="col-xs-6 col-sm-4 col-md-4 unvisible-small"><a href="image/high/square.jpg" class="image-popup"><img src="image/high/square.jpg" alt="" class="construct-image"></a></div>
+									<div class="col-xs-6 col-sm-4 col-md-4 unvisible-small"><a href="image/high/tubus.jpg" class="image-popup"><img src="image/high/tubus.jpg" alt="" class="construct-image"></a></div>
+									<button class="construct-show-more"><span>Показать еще</span></button>
+								</div>
+								<!-- end construct examples -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container screen service" id="service-ref">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							<h2 class="service-title title">Сервисы</h2>
+							<div class="col-md-10 col-md-offset-1 service-column">
+								<div class="service-container">
+
+									<div class="service-heading">
+										<h3 class="service-heading-title title">
+											<a id="to-service-print" href="#service-print" data-toggle="collapse" class="service-link"><span class="glyphicon glyphicon-menu-right"></span>Печать</a>
+										</h3>
+									</div>
+									<div id="service-print" class="collapse service-body-container">
+										<div class="service-body">
+											<ul class="option-body-list">
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Офсетная</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Шелкотрафаретная</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Цифровая</li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<div class="service-container">
+
+									<div class="service-heading">
+										<h3 class="service-heading-title title">
+											<a id="to-service-lodgment" href="#service-lodgment" data-toggle="collapse" class="service-link"><span class="glyphicon glyphicon-menu-right"></span>Ложемент</a>
+										</h3>
+									</div>
+									<div id="service-lodgment" class="collapse service-body-container">
+										<div class="service-body">
+											<ul class="option-body-list">
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Ложемент из поролона, изолона</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Тканевый ложемент</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Эко стиль - "Арт-сено"</li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<div class="service-container">
+
+									<div class="service-heading">
+										<h3 class="service-heading-title title">
+											<a id="to-service-postprint" href="#service-postprint" data-toggle="collapse" class="service-link"><span class="glyphicon glyphicon-menu-right"></span>Послепечатные эффекты</a>
+										</h3>
+									</div>
+									<div id="service-postprint" class="collapse service-body-container">
+										<div class="service-body">
+											<ul class="option-body-list">
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Конгрев</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Термоподъем</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Выборочный уф-лак</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Тиснение фольгой (цвет на выбор)</li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<div class="service-container">
+
+									<div class="service-heading">
+										<h3 class="service-heading-title title">
+											<a id="to-service-design" href="#service-design" data-toggle="collapse" class="service-link"><span class="glyphicon glyphicon-menu-right"></span>Дизайн</a>
+										</h3>
+									</div>
+									<div id="service-design" class="collapse service-body-container">
+										<div class="service-body">
+											<ul class="option-body-list">
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Разработка логотипа</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Изготовление нового дизайна</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Визуализация концепта дизайна в 3D</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Особенности послепечатных работ(конгрев, тиснение, выборочный уф-лак, использование текстильных материалов</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Использование готового макета</li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<div class="service-container">
+
+									<div class="service-heading">
+										<h3 class="service-heading-title title">
+											<a id="to-service-material" href="#service-material" data-toggle="collapse" class="service-link"><span class="glyphicon glyphicon-menu-right"></span>Материалы</a>
+										</h3>
+									</div>
+									<div id="service-material" class="collapse service-body-container">
+										<div class="service-body">
+											<ul class="option-body-list">
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Дизайнерский картон</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Дизайнерская бумага</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Декоративная бумага</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Крафт-картон</li>
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Премиум материалы: ткань, кожа</li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<div class="service-container">
+
+									<div class="service-heading">
+										<h3 class="service-heading-title title">
+											<a id="to-service-sample" href="#service-sample" data-toggle="collapse" class="service-link"><span class="glyphicon glyphicon-menu-right"></span>Образцы</a>
+										</h3>
+									</div>
+									<div id="service-sample" class="collapse service-body-container">
+										<div class="service-body">
+											<ul class="option-body-list">
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Создание тестового образца</li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<div class="service-container">
+
+									<div class="service-heading">
+										<h3 class="service-heading-title title">
+											<a id="to-service-terms" href="#service-terms" data-toggle="collapse" class="service-link"><span class="glyphicon glyphicon-menu-right"></span>Сроки изготовления</a>
+										</h3>
+									</div>
+									<div id="service-terms" class="collapse service-body-container">
+										<div class="service-body">
+											<span>Сроки производства составляют 10-15 рабочих днейс момента согласования технического задания и внесения предоплаты</span>
+											<ul class="option-body-list">
+												<li class="service-option-link"><span class="glyphicon glyphicon-minus"></span>Срочное производство (оговариавается индивидуально)</li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<div class="callback-service-container">
+									<span class="service-callback-text">Мы запишем все отмеченные пункты и оговорим их с вами.</span>
+									<button data-target="#callback" class="callback-ref callme-button" data-toggle="modal" class="service-callback-button"><span>Звонок</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container screen contacts" id="contacts-ref">
+					<div class="row">
+						<div class="col-md-12 contacts-container">
+							<h2 class="contacts-title title">Контакты</h2>
+							<div class="col-md-12 contacts-column">
+								<h3 class="contacts-phone">+38 0XX XXX XX XX</h3>
+								<h3 class="contacts-phone">+38 0XX XXX XX XX</h3>
+								<h3 class="contacts-email">contact@no-box.com.ua</h3>
+								<h3 class="contacts-adress">Днепр, ул. Театральная</h3>
+								<a href="#"><img src="image/facebook.svg" alt="" class="social-icon facebook-icon"></a>
+								<a href="#"><img src="image/instagram.svg" alt="" class="social-icon instagram-icon"></a>
+							</div>
+						</div>
+					</div>
+					<div class="row ">
+						<div class="col-md-12 copyright">
+							Site designed and created by <a href="platon-rov.github.io">Platon Rov</a>
+						</div>
+					</div> 
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$(window).on('load', function () {
+			    var $preloader = $('.main-loader-container');
+			    $preloader.delay(1000).fadeOut(750);
+			});
+		</script>
+		<!-- <script src="js-particleslider.js"></script>
+		<script type="text/javascript">
+			var ps = new ParticleSlider({
+				width: 1000,
+				height: 300
+			});
+		</script> -->
+
+		<script src="js/classie.js"></script> 
+		<script src="js/main.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				$('a.menu-link-ref').on('click', function(event){     
+				    event.preventDefault();
+				    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+				});
+
+
+				$(".service-link").click(function() {
+					$(this).find("span.glyphicon").toggleClass("glyphicon-menu-right").toggleClass("glyphicon-menu-down");
+				});
+
+				$(".callback-link").click(function() {
+					$(this).toggleClass("active");
+
+					if( $(".callback-link ").is(".active") ) {
+						$('.callback-phone-body').slideUp(500);
+						$('.callback-email-body').slideDown(500);
+						$(this).text("Позвоните мне");
+					}
+					else {
+						$('.callback-email-body').slideUp(500);
+						$('.callback-phone-body').slideDown(500);
+						$(this).text("Напишите мне");
+					}
+				});
+
+				$(".service-option-link").click(function() {
+					$(this).toggleClass('active').find("span.glyphicon").toggleClass('glyphicon-minus').toggleClass("glyphicon-ok");
+					toggleServiceCallback();
+				});
+
+				function toggleServiceCallback() {
+
+					if( $(".service-option-link span").is(".glyphicon-ok") ){
+						$('.callback-service-container').slideDown(500);
+					}
+					else {
+						$('.callback-service-container').slideUp(500);
+					}
+				}
+					// поиск текстов всех выбранных опций
+				// $(".service-option-link").click(function() {
+				// 	alert( $(".service-option-link").find("span.glyphicon-ok").parent().text() );
+				// });
+
+				$('.construct-show-more').on('click', function() {
+					$(this).fadeOut(500);
+					$('.construct-examples .row div.unvisible-small').slideDown(750);
+				});
+
+				$('.product-show-more').on('click', function() {
+					$(this).fadeOut(500);
+					$('.product-row div.unvisible-small').slideDown(750);
+				});
+
+
+				$('.image-popup').magnificPopup({
+					type: 'image',
+					closeOnContentClick: true,
+					closeBtnInside: false,
+					fixedContentPos: true,
+					mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+					image: {
+						verticalFit: true
+					},
+					zoom: {
+						enabled: false,
+						duration: 300 // don't foget to change the duration also in CSS
+					}
+				});
+				
+			});
+		</script>
+	</body>
+</html>

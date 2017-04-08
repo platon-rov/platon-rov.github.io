@@ -1,0 +1,440 @@
+
+/*globals*/
+body {
+	font-family: 'Jura', sans-serif;
+	box-sizing: border-box;
+	font-size: 18px;
+	background-image: url(../image/dark_polygon06.png);
+	background-size: cover;
+	color:  #DBDBDB;
+	padding-right: 0px !important;
+
+	/*add old browser!*/
+	/*background: linear-gradient(to bottom, #DBDBDB, #151515);*/
+}
+
+body.modal-open {
+	padding-right: 0;
+}
+
+.content-wrap {
+	text-align: center;
+}
+
+a {
+	color: inherit;
+}
+
+a:hover, a:focus, i:hover {
+	color: #c6a15b;
+}
+
+h2.title, .about-us-subtitle {
+	font-family: 'Philosopher', sans-serif;
+	color: #c6a15b;
+	text-transform: uppercase;
+}
+
+.glyphicon {
+	font-size: 0.8em;
+}
+
+.glyphicon:after {
+	content: " ";
+	margin-right: 10px;
+}
+
+.main, .product, .construct, .contacts {
+	min-height: 100vh;
+}
+
+.about-us, .service {
+	padding: 5em 1em;
+}
+
+label {
+	font-weight: normal;
+}
+
+/*end globals*/
+
+/*main*/
+
+.main {
+	text-align: left;
+}
+
+.main-logo {
+	max-width: 100%;
+}
+
+/*particle-logo*/
+#particle-slider {
+	max-width: 1000px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+#particle-slider div {
+	display: none;
+}
+
+/*end main*/
+
+/*product*/
+
+.screen.product {
+	padding: 0 15px;
+}
+
+.product-column {
+	padding: 0;
+}
+
+.product-show-more {
+	display: none;
+	margin: 0 auto;
+	position: relative;
+	top: 30px;
+}
+/*end product*/
+
+
+/*about us*/
+.construct-column {
+	position: relative;
+}
+
+.about-us-title {
+	margin-bottom: -0.5em;
+}
+
+.about-us-text {
+	border: 1px solid #b4b4b4;
+	border-top: none;
+	padding: 2em;
+}
+
+.about-us-text:before {
+	content: " ";
+	height: 1px;
+	width: 33.3%;
+	background-color: #b4b4b4;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.about-us-text:after {
+	content: " ";
+	height: 1px;
+	width: 33.3%;
+	background-color: #b4b4b4;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+/*end about us*/
+
+/*construct*/
+.construct-column {
+
+}
+
+.construct-title {
+	margin-bottom: -0.5em;
+	position: relative;
+}
+
+.construct-title:before {
+	content: " ";
+	height: 1px;
+	width: 33.3%;
+	background-color: #b4b4b4;
+	position: absolute;
+	left: 0;
+	top: 0.5em;
+}
+
+.construct-title:after {
+	content: " ";
+	height: 1px;
+	width: 33.3%;
+	background-color: #b4b4b4;
+	position: absolute;
+	right: 0;
+	top: 0.5em;
+}
+
+.construct-examples {
+	position: relative;
+	padding: 2em 0;
+	width: 100%;
+}
+
+.construct-examples .row {
+	margin-top: 2em;
+}
+
+.construct-examples .row div:nth-of-type(1),
+.construct-examples .row div:nth-of-type(2),
+.construct-examples .row div:nth-of-type(3) {
+	margin-bottom: 30px;
+}
+
+.construct-image {
+	max-width: 100%;
+}
+
+.construct-show-more {
+	margin: 0 auto;
+	display: none;
+}
+
+/*end construct*/
+
+/*service*/
+.service-title {
+	margin-bottom: -0.5em;
+}
+
+.service-column {
+	position: relative;
+	border: 1px solid #b4b4b4;
+	border-top: none;
+	padding: 2em;
+}
+
+.service-container {
+	text-align: justify;
+}
+
+.service-container:before {
+	content: " ";
+	height: 1px;
+	width: 33.3%;
+	background-color: #b4b4b4;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.service-container:after {
+	content: " ";
+	height: 1px;
+	width: 33.3%;
+	background-color: #b4b4b4;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.service-body-container {
+	position: relative;
+}
+
+.service-body {
+	padding: 2em;
+}
+
+.service-body:before {
+	content: " ";
+	height: 1px;
+	width: 25%;
+	background-color: #b4b4b4;
+	position: absolute;
+	right: 0;
+	top: -1.15em;
+}
+
+.service-body:after {
+	content: " ";
+	height: 1px;
+	width: 100%;
+	background-color: #b4b4b4;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.option-body-list {
+	list-style: none;
+}
+
+.service-option-link {
+	cursor: pointer;
+
+}
+
+.service-option-link.active {
+	color: #c6a15b;
+}
+
+.service-callback-text {
+	display: block;
+	margin: 20px 0px;
+}
+
+.callback-service-container {
+	display: none;
+}
+/*end service*/
+
+/*contacts*/
+.contacts {
+	position: relative;
+}
+
+.contacts-title {
+	position: relative;
+}
+
+.contacts-container {
+	height: 100vh;
+	position: relative;
+}
+
+.contacts-column {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -115px;
+	width: 100%
+}
+
+.contacts-title:before {
+	content: " ";
+	height: 1px;
+	width: 33.3%;
+	background-color: #b4b4b4;
+	position: absolute;
+	left: 0;
+	top: 0.5em;
+}
+
+.contacts-title:after {
+	content: " ";
+	height: 1px;
+	width: 33.3%;
+	background-color: #b4b4b4;
+	position: absolute;
+	right: 0;
+	top: 0.5em;
+}
+
+.contacts-column h3 {
+	font-size: 1.4em;
+}
+
+h3.contacts-adress {
+	margin-top: -0.3em;
+	font-size: 1.2em;
+}
+
+.social-icon {
+	width: 50px;
+	height: 50px;
+}
+
+.facebook-icon {
+	margin-right: 25px;
+}
+
+.instagram-icon {
+	margin-left: 25px;
+}
+
+.copyright {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+/*end contacts*/
+
+/*modal widows*/
+.modal-content {
+	background: #373a47;
+}
+
+.close-modal {
+	float: right;
+	background: none;
+	border: none;
+	line-height: 32px;
+	font-size: 42px;
+}
+
+.callme-button, .construct-show-more, .product-show-more {
+	background: none;
+	border: 1px solid #b4b4b4;
+	color: #b4b4b4;
+	padding: 0.5em 2em;
+	text-transform: uppercase;
+}
+
+.callme-button:hover, .construct-show-more:hover, .product-show-more:hover {
+	border: 1px solid #c6a15b;
+	color: #c6a15b;
+}
+
+.callback-email-body {
+	display: none;
+}
+
+.callback-link-wrapper {
+	text-align: center;
+	font-size: 22px;
+}
+/*end modal window*/
+
+/*buttons*/
+.callback-button {
+	position: fixed;
+	z-index: 1001;
+	margin: 1em;
+	margin-top: 3.25em;
+	padding: 0;
+	width: 2.5em;
+	height: 2.25em;
+	border: none;
+	text-indent: 0.15em;
+	font-size: 1.5em;
+	color: #b4b4b4;
+	background: transparent;
+	transform: rotate(90deg);
+	transition: transform 0.3s;
+	outline: none;
+}
+
+.callback-button:hover {
+	opacity: 0.6;
+	transform: rotate(0deg);
+	transition: transform 0.3s;
+}
+
+/*end buttons*/
+
+@media(max-width: 768px) {
+	.unvisible-small {
+		display: none;
+	}
+	.container-fluid.product {
+		padding: 0;
+	}
+	figure.effect-lily {
+		margin: 0;
+		margin-bottom: -7px;
+	}
+	.construct-examples .row div {
+		margin-bottom: 30px;
+	}
+
+	.construct-show-more, .product-show-more {
+		display: block;
+	}
+	.modal.fade.in {
+		padding-right: 0 !important;
+	}
+}

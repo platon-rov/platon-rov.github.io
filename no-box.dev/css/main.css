@@ -392,14 +392,15 @@ h3.contacts-adress {
 /*buttons*/
 .callback-button {
 	position: fixed;
-	z-index: 1001;
-	margin: 1em;
-	margin-top: 3.25em;
+	left: 0;
+	top: 100%;
+	z-index: 1002;
+	margin: -6.25em 1em 1em 1.15em;
 	padding: 0;
-	width: 2.5em;
+	width: 2.25em;
 	height: 2.25em;
-	border: none;
-	text-indent: 0.15em;
+	border: 1px solid #b4b4b4;
+	border-radius: 2.25em;
 	font-size: 1.5em;
 	color: #b4b4b4;
 	background: transparent;
@@ -413,6 +414,10 @@ h3.contacts-adress {
 	transform: rotate(0deg);
 	transition: transform 0.3s;
 }
+
+/*.show-menu .callback-button {
+	margin-top: -4em;
+}*/
 
 /*end buttons*/
 

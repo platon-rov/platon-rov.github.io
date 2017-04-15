@@ -192,7 +192,7 @@
 								<input type="text" class="form-control" id="callback-email">
 							</div>
 							<div class="form-group callback-link-wrapper">
-								<a href="#" class="callback-link">Напишите мне</a>
+								<a class="callback-link">Напишите мне</a>
 							</div>
 						</form>
 					</div>
@@ -563,6 +563,20 @@
 					$(this).find("span.glyphicon").toggleClass("glyphicon-menu-right").toggleClass("glyphicon-menu-down");
 				});
 
+				$(".service-option-link").click(function() {
+					$(this).toggleClass('active').find("span.glyphicon").toggleClass('glyphicon-minus').toggleClass("glyphicon-ok");
+					toggleServiceCallback();
+				});
+
+				function toggleServiceCallback() {
+					if( $(".service-option-link span").is(".glyphicon-ok") ){
+						$('.callback-service-container').slideDown(500);
+					}
+					else {
+						$('.callback-service-container').slideUp(500);
+					}
+				}
+
 				$(".callback-link").click(function() {
 					$(this).toggleClass("active");
 
@@ -578,33 +592,19 @@
 					}
 				});
 
-				$(".service-option-link").click(function() {
-					$(this).toggleClass('active').find("span.glyphicon").toggleClass('glyphicon-minus').toggleClass("glyphicon-ok");
-					toggleServiceCallback();
-				});
-
-				function toggleServiceCallback() {
-
-					if( $(".service-option-link span").is(".glyphicon-ok") ){
-						$('.callback-service-container').slideDown(500);
-					}
-					else {
-						$('.callback-service-container').slideUp(500);
-					}
-				}
 					// поиск текстов всех выбранных опций
 				// $(".service-option-link").click(function() {
 				// 	alert( $(".service-option-link").find("span.glyphicon-ok").parent().text() );
 				// });
 
-				$('.construct-show-more').on('click', function() {
-					$(this).fadeOut(500);
-					$('.construct-examples .row div.unvisible-small').slideDown(750);
-				});
-
 				$('.product-show-more').on('click', function() {
 					$(this).fadeOut(500);
 					$('.product-row div.unvisible-small').slideDown(750);
+				});
+
+				$('.construct-show-more').on('click', function() {
+					$(this).fadeOut(500);
+					$('.construct-examples .row div.unvisible-small').slideDown(750);
 				});
 
 

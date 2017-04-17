@@ -13,7 +13,7 @@
 	float: left;
 	overflow: hidden;
 	min-width: 320px;
-	max-width: 480px;
+	/*max-width: 480px;*/
 	max-height: 360px;
 	background: #3085a3;
 	text-align: center;

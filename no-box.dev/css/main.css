@@ -4,7 +4,7 @@ body {
 	font-family: 'Jura', sans-serif;
 	box-sizing: border-box;
 	font-size: 18px;
-	background-image: url(../image/dark_polygon06.png);
+	background: url(../image/dark_polygon06.png) no-repeat center center fixed;
 	background-size: cover;
 	color:  #DBDBDB;
 	padding-right: 0px !important;

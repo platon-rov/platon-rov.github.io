@@ -279,9 +279,9 @@ img.mfp-img {
 .mfp-bottom-bar {
   margin-top: -108px;
   position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
+  top: 25%;
+  left: 90%;
+  width: 50%;
   cursor: auto; 
   background: rgba(0,0,0, 0.5); 
   padding: 10px 0;}
@@ -291,14 +291,26 @@ img.mfp-img {
   line-height: 18px;
   color: #F3F3F3;
   word-wrap: break-word;
-  padding-right: 36px; 
-  padding-left: 36px;}
+  padding-right: 16px; 
+  padding-left: 16px;}
 
 .mfp-image-holder .mfp-content {
   max-width: 100%; }
 
 .mfp-gallery .mfp-image-holder .mfp-figure {
   cursor: pointer; }
+
+ @media(max-width: 992px) {
+	.mfp-bottom-bar {
+	  position: absolute;
+	  top: 100%;
+	  left: 5%;
+	  width: 90%;
+	  margin-top: -108px;
+	  cursor: auto; 
+	  background: rgba(0,0,0, 0.5); 
+	  padding: 10px 0;}
+ }
 
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
   /**

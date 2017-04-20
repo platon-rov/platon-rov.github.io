@@ -23,8 +23,149 @@
 		<!-- для вспылвающих фото -->
 		<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 		<link rel="stylesheet" href="css/magnific-popup.css">
+		<style>
+			.main-loader-container {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: #373a47;
+				z-index: 100500;
+			}
+
+			.main-loader-wrapper {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -75px;
+				margin-top: -150px;
+			}
+
+			@-webkit-keyframes rotate {
+			  0% {
+			    -webkit-transform: rotate(0deg);
+			            transform: rotate(0deg);
+			  }
+			  50% {
+			    -webkit-transform: rotate(180deg);
+			            transform: rotate(180deg);
+			  }
+			  100% {
+			    -webkit-transform: rotate(360deg);
+			            transform: rotate(360deg);
+			  }
+			}
+			@keyframes rotate {
+			  0% {
+			    -webkit-transform: rotate(0deg);
+			            transform: rotate(0deg);
+			  }
+			  50% {
+			    -webkit-transform: rotate(180deg);
+			            transform: rotate(180deg);
+			  }
+			  100% {
+			    -webkit-transform: rotate(360deg);
+			            transform: rotate(360deg);
+			  }
+			}
+			@-webkit-keyframes rotate2 {
+			  0% {
+			    -webkit-transform: rotate(0deg);
+			            transform: rotate(0deg);
+			    border-top-color: rgba(255, 255, 255, 0.5);
+			  }
+			  50% {
+			    -webkit-transform: rotate(180deg);
+			            transform: rotate(180deg);
+			    border-top-color: rgba(255, 255, 255, 0.5);
+			  }
+			  100% {
+			    -webkit-transform: rotate(360deg);
+			            transform: rotate(360deg);
+			    border-top-color: rgba(255, 255, 255, 0.5);
+			  }
+			}
+			@keyframes rotate2 {
+			  0% {
+			    -webkit-transform: rotate(0deg);
+			            transform: rotate(0deg);
+			    border-top-color: rgba(255, 255, 255, 0.5);
+			  }
+			  50% {
+			    -webkit-transform: rotate(180deg);
+			            transform: rotate(180deg);
+			    border-top-color: rgba(255, 255, 255, 0.5);
+			  }
+			  100% {
+			    -webkit-transform: rotate(360deg);
+			            transform: rotate(360deg);
+			    border-top-color: rgba(255, 255, 255, 0.5);
+			  }
+			}
+			* {
+			  box-sizing: border-box;
+			}
+
+			#main-loader {
+			  position: relative;
+			  margin: 75px auto;
+			  width: 150px;
+			  height: 150px;
+			  display: block;
+			  overflow: hidden;
+			}
+
+			#main-loader div {
+			  height: 100%;
+			}
+
+			/* loader 4 */
+			#main-loader, #main-loader div {
+			  border-radius: 50%;
+			  padding: 8px;
+			  border: 2px solid transparent;
+			  -webkit-animation: rotate linear 3.5s infinite;
+			          animation: rotate linear 3.5s infinite;
+			  border-radius: 50%;
+			  padding: 4px;
+			  -webkit-animation: rotate2 4s infinite linear;
+			          animation: rotate2 4s infinite linear;
+			}
+
+			.loader {
+			  will-change: transform;
+			}
+		</style>
 	</head>
 	<body>
+		<div class="main-loader-container">
+			<div class="main-loader-wrapper">
+				<div id="main-loader" class="loader">
+				  <div>
+				    <div>
+				      <div>
+				        <div>
+				          <div>
+				            <div>
+				              <div>
+				                <div>
+				                  <div>
+				                    <div></div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>	
+		</div>
+		
 		<div class="container-fluid">
 			<div class="rov">
 				<div class="col-md-12 gallery-header">

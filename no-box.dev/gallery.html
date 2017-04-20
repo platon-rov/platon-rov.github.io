@@ -208,6 +208,12 @@
 				</div>
 			</div>
 			<script>
+			$(window).on('load', function () {
+			    var $preloader = $('.main-loader-container');
+			    $preloader.delay(1000).fadeOut(750);
+			});
+			</script>
+			<script>
 				$('.image-popup').magnificPopup({
 					type: 'image',
 					closeOnContentClick: true,

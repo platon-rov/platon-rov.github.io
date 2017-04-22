@@ -62,7 +62,6 @@
 }
 
 .grid figure h2 {
-	word-spacing: -0.15em;
 	font-weight: 300;
 }
 
@@ -105,9 +104,9 @@ figure.effect-lily figcaption > div {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	padding: 2em;
+	padding: 1em;
 	width: 100%;
-	height: 50%;
+	height: 30%;
 }
 
 figure.effect-lily h2,
@@ -132,6 +131,11 @@ figure.effect-lily:hover img,
 figure.effect-lily:hover p {
 	opacity: 1;
 }
+
+figure.effect-lily:hover figcaption > div {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 
 figure.effect-lily:hover img,
 figure.effect-lily:hover h2,

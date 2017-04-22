@@ -64,12 +64,16 @@ body,
 	right: 0.5em;
 	bottom: 0.5em;
 	left: 0.5em;
-    background: linear-gradient(#b4b4b4 20%, transparent 20%, transparent 40%, #b4b4b4 40%, #b4b4b4 60%, transparent 60%, transparent 80%, #b4b4b4 80%);
+    background: linear-gradient(#373a47 20%, transparent 20%, transparent 40%, #373a47 40%, #373a47 60%, transparent 60%, transparent 80%, #373a47 80%);
 	content: '';
 }
 
+.menu-button-silver::before {
+	background: linear-gradient(#b4b4b4 20%, transparent 20%, transparent 40%, #b4b4b4 40%, #b4b4b4 60%, transparent 60%, transparent 80%, #b4b4b4 80%);
+}
+
 .menu-button:hover {
-	opacity: 0.6;
+	opacity: 0.8;
 }
 
 /* Close Button */

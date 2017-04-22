@@ -66,12 +66,14 @@ label {
 	background-size: cover;
 	-webkit-filter: blur(3px);
 	filter: blur(3px);
+	padding: 0;
 }
 
 .main-double {
 	width: 100%;
 	height: 100%;
 	background: rgba(198, 161, 91, 0.3);
+	/*background: rgba(255, 255, 255, 0.1);*/
 }
 
 .main-logo-container {

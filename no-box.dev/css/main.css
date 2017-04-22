@@ -68,8 +68,10 @@ label {
 	filter: blur(3px);
 }
 
-.main-logo {
-	max-width: 100%;
+.main-double {
+	width: 100%;
+	height: 100%;
+	background: rgba(198, 161, 91, 0.3);
 }
 
 .main-logo-container {
@@ -78,7 +80,6 @@ label {
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	background: rgba(198, 161, 91, 0.3);
 }
 
 .main-logo-wrapper {

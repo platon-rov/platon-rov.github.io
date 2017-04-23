@@ -160,9 +160,9 @@ body,
 .icon-list a span {
 	display: inline-block;
 	margin-left: 10px;
-	font-size: 0.75em;
+	font-size: 1em;
 	vertical-align: middle;
-	font-weight: 700;
+	font-weight: normal;
 	letter-spacing: 1px;
 }
 

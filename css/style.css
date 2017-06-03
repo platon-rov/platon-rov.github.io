@@ -1,0 +1,447 @@
+body {
+	background: #000000;
+	font-family: 'Montserrat', sans-serif;
+	color: #ffffff;
+}
+
+h2 {
+	font-size: 40px;
+	margin: 0;
+}
+
+a:hover {
+	color: #ffffff;
+}
+
+.color-red {
+	color: #ff0000 !important;
+}
+
+.header {
+	height: 80px;
+	position: fixed;
+	z-index: 10;
+	padding: 0;
+	background: #000000;
+}
+
+.header div {
+	overflow: auto;
+}
+
+.header-logo {
+	float: left;
+	font-size: 28px;
+	color: #ffffff;
+}
+
+.get-menu {
+	float:right;
+	border: none;
+	background: transparent;
+	float: right;
+	outline: none;
+	margin: 29px 0;
+}
+
+.content {
+}
+
+.sidebar {
+	position: fixed;
+	height: 100vh;
+}
+
+.sidebar-wrapper {
+	border-left: 2px solid rgba(255, 255, 255, 0.3);
+	height: 410px;
+	position: absolute;
+	top: 50%;
+	margin-top: -205px;
+}
+
+.sidebar-nav-dot {
+	width: 2px;
+	height: 2px;
+	border-radius: 2px;
+	border: 2px solid #ffffff;
+	position: relative;
+	left: -3px;
+	margin: 25px 0;
+}
+
+.dot-white {
+	left: -4px;
+	border-radius: 3px;
+	border: 3px solid #ffffff;
+}
+
+.dot-white.active {
+	border-color: red;
+}
+
+
+.dot-main::before {
+	position: relative;
+	top: -10px;
+	left: 10px;
+}
+
+.dot-main::after {
+	display: none;
+	position: relative;
+	top: -30px;
+	left: 10px
+}
+
+#dot-home::before{
+	content: "01";
+}
+#dot-home::after {
+	content: "Home";
+}
+#dot-skills::before{
+	content: "02";
+}
+#dot-skills::after {
+	content: "Skills";
+}
+#dot-portfolio::before{
+	content: "03";
+}
+#dot-portfolio::after {
+	content: "Portfolio";
+}
+#dot-contact::before{
+	content: "04";
+}
+#dot-contact::after {
+	content: "Contact";
+}
+
+.dot-main.active::before, .dot-main.active::after {
+	color: #ffffff;
+}
+
+.dot-main.active::before {
+	left: -30px;
+}
+
+.dot-main.active::after {
+	display: block;
+}
+
+.slide {
+	height: 100vh;	
+	position: relative;
+}
+
+/*main section*/
+
+.main-slide {
+	background: url(../source/main_back.png);
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+}
+
+.main-promo {
+	width: 75%;
+	display: inline-block;
+}
+
+.main-title {
+	font-size: 56px;
+	margin-bottom: 70px;
+}
+
+.main-promo span {
+	display: block;
+	font-size: 40px;
+}
+
+.main-get-hire {
+	position: relative;
+}
+
+.main-button-hire {
+	z-index: 2;
+	font-size: 40px;
+	margin-left: 150px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: inherit;
+	position: relative;
+	padding: 4px 31px 4px 0;
+}
+
+.main-button-hire:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+.main-button-hire-red {
+	z-index: 1;
+	display: inline-block;
+	width: 212px;
+	height: 57px;
+	background: #ff0000;
+	position: absolute;
+	left: 182px;
+	top: 0;
+}
+
+.main-button-hire-right {
+	display: inline-block;
+	height: 29.5px;
+	width: auto;
+}
+
+/*end main section*/
+
+/*SKILLZ SLIDE*/
+
+.skills-title {
+	margin-top: 40px;
+	margin-bottom: 14px;
+}
+
+.skills-content-list {
+	overflow: auto;
+	float: left;
+}
+
+.skills-content-text {
+	height: 420px;
+	display: table;
+}
+
+.skills-text {
+	display: block;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.skills-list {
+	list-style: none;
+	overflow: auto;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+.skills-list-el {
+	border: 5px solid red;
+	padding: 5px 50px;
+	font-size: 24px;
+	line-height: 2em;
+	margin: 10px 0;
+	float: left;
+	clear: both;
+}
+
+.skills-list-el:nth-of-type(1) {
+	margin-top: 0;
+}
+
+.skills-list-el:last-child {
+	margin-bottom: 0;
+}
+
+.skills-text {
+	font-size: 22px;
+}
+
+/*PORTFOLIO SLIDE*/
+.portfolio-title {
+	margin: 14px 0;
+}
+
+.open-modal {
+	margin: 0 25px;
+}
+
+.project-preview-img {
+	text-align: center;
+	width: 180px;
+	height: 180px;
+	border-radius: 150px;
+	margin: 0 auto;
+}
+
+.project-preview-img span {
+	line-height: 180px;
+	font-size: 80px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: justify;
+}
+
+.m-bees-img {
+	background: yellow;
+}
+.zvezda-davida-img {
+	background: #ffffff;
+}
+.no-box-img {
+	background: #373a47;
+}
+/*CONTACT SLIDE*/
+
+.contact-slide {
+	background: url(../source/map_black.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.contact-column {
+	height: 528px;
+	display: table;
+}
+
+.contact-form {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.contact-form-content {
+	background: #000000;
+	z-index: 10;
+	margin: 0 auto;
+	padding: 10px 20px;
+	border-radius: 2px;
+}
+
+.contact-form-content span.contact-text {
+	display: block;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.contact-form-content span.contact-text:last-child{
+	margin-bottom: 0;
+}
+
+.contact-text a {
+	font-size: 22px;
+	color: red;
+}
+
+.contact-text img {
+	margin-right: 10px;
+}
+
+/*MENU*/
+
+.menu-item {
+	font-size: 1.5em !important;
+	text-align: center;
+}
+
+.menu-item.active::before {
+	content: " ";
+	display: block;
+	width: 100%;
+	height: 10px;
+	background: red;
+	position: absolute;
+	top: 50%;
+	margin-top: -2px;
+}
+
+/*MODALS*/
+
+.modal-content {
+	background: #000000;
+	padding: 20px 40px;
+	border-radius: 0px;
+	border-top: 1px solid red;
+	border-bottom: 1px solid red;
+	font-size: 18px;
+}
+
+.modal-content p span.color-red {
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.project-url {
+	color: red;
+}
+
+.screens {
+	text-align: center;
+}
+
+.project-screen {
+	margin-bottom: 20px;
+	max-width: 100%;
+}
+
+@media(max-width: 992px) {
+	.skills-list-el, .skills-text {
+		font-size: 20px;
+	}
+	.skills-content-text {
+		height: 340px;
+	}
+}
+
+@media(max-width: 768px) {
+	h2 {
+		font-size: 26px;
+	}
+	.header {
+		width: 100%;
+	}
+	.main-title {
+		margin: 0;
+	}
+
+	.skills-list-el, .skills-text {
+		font-size: 16px;
+	}
+	.contact-form-content span.contact-text {
+		font-size: 18px;
+	}
+}
+
+@media(max-width: 662px) {
+	.main-title {
+		font-size: 36px;
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+	}
+	.main-promo span {
+		font-size: 32px;
+	}
+	.main-button-hire {
+		margin-left: 0;
+		font-size: 28px;
+	}
+	.main-button-hire-red {
+		height: 42px;
+		left: 22px;
+	}
+	.skills-slide {
+		padding-top: 40px;
+	}
+	.skills-content-list {
+		float: none;
+	}
+	.skills-list {
+		margin-bottom: 20px;
+	}
+	.skills-content-text:nth-of-type(2) {
+		padding: 0;
+	}
+	.contact-column {
+		margin: 0 auto;
+	}
+	.contact-form-content {
+		width: 100%;
+	}
+	/*.portfolio-slide {
+		padding-top: 180px;
+	}*/
+}

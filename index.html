@@ -1,33 +1,313 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
-		<title>Platon Rov - Creating sites and more!</title>
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
-		<link rel="manifest" href="icon/manifest.json">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>MadRov / Platon Rov - Web Development.</title>
+
+		<link rel="icon" href="source/icon.png">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,900" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/component.css">
+		<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+		<script src="js/modernizr.custom.25376.js"></script>
 	</head>
 	<body>
-		<div class="title">
-			<h1 class="main-title"><a href="https://vk.com/deathrov">Platon<br>Rov</a></h1>
-			<h6 class="main-mail"><a href="mailto:platon.rov@gmail.com">platon.rov@gmail.com</a></h6>
+		<div id="perspective" class="perspective effect-rotateleft">
+			<div class="container-for-menu">
+				<div class="wrapper">
+					<div class="container">
+						<div class="row header container">
+							<div class="col-md-12">
+								<h1 class="header-logo"><span class="color-red">mad</span>rov</h1>
+								<button class="get-menu" id="showMenu">
+									<svg 
+									 xmlns="http://www.w3.org/2000/svg"
+									 xmlns:xlink="http://www.w3.org/1999/xlink"
+									 width="19px" height="14px">
+									<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+									 d="M18.000,2.000 L1.000,2.000 C0.448,2.000 -0.000,1.552 -0.000,1.000 C-0.000,0.448 0.448,0.000 1.000,0.000 L18.000,0.000 C18.552,0.000 19.000,0.448 19.000,1.000 C19.000,1.552 18.552,2.000 18.000,2.000 ZM4.000,8.000 C3.448,8.000 3.000,7.552 3.000,7.000 C3.000,6.448 3.448,6.000 4.000,6.000 L15.000,6.000 C15.552,6.000 16.000,6.448 16.000,7.000 C16.000,7.552 15.552,8.000 15.000,8.000 L4.000,8.000 ZM1.000,12.000 L18.000,12.000 C18.552,12.000 19.000,12.448 19.000,13.000 C19.000,13.552 18.552,14.000 18.000,14.000 L1.000,14.000 C0.448,14.000 -0.000,13.552 -0.000,13.000 C-0.000,12.448 0.448,12.000 1.000,12.000 Z"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="container">
+						<div class="row">
+							<div class="col-md-1 sidebar hidden-xs hidden-sm">
+								<div class="sidebar-wrapper" id="site-menu">
+									<div class="sidebar-nav-dot dot-white dot-main" data-menuanchor="main-section" id="dot-home">
+										
+									</div>
+									<div class="sidebar-nav-dot"></div>
+									<div class="sidebar-nav-dot"></div>
+									<div class="sidebar-nav-dot"></div>
+									<div class="sidebar-nav-dot dot-white dot-main" data-menuanchor="skills-section" id="dot-skills">
+										
+									</div>
+
+									<div class="sidebar-nav-dot"></div>
+									<div class="sidebar-nav-dot"></div>
+									<div class="sidebar-nav-dot"></div>
+									<div class="sidebar-nav-dot dot-white dot-main" data-menuanchor="portfolio-section" id="dot-portfolio">
+										
+									</div>
+
+									<div class="sidebar-nav-dot"></div>
+									<div class="sidebar-nav-dot"></div>
+									<div class="sidebar-nav-dot"></div>
+									<div class="sidebar-nav-dot dot-white dot-main" data-menuanchor="contact-section" id="dot-contact">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="container">
+						<div class="row content">
+							<div class="col-md-11 col-md-offset-1" id="site-content">
+								<div class="slide main-slide section" id="slide0">
+									<div class="container-fluid">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="main-promo">
+													<h1 class="main-title">Platon Rov - creating sites and more!</h1>
+													<span class="main-text-info">Check info &</span>
+													<div class="main-get-hire">
+														<a href="#contact-section" class="main-button-hire">hire me
+															<?xml version="1.0" encoding="iso-8859-1"?>
+															<svg class="main-button-hire-right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.49 31.49" style="enable-background:new 0 0 31.49 31.49;" xml:space="preserve" width="512px" height="512px">
+															<path d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111  C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587  c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z" fill="#FFFFFF"/>
+														</a>
+														<span class="main-button-hire-red"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide skills-slide section" id="slide1">
+									<div class="container-fluid">
+										<div class="row">
+											<div class="col-md-12">
+												<h2 class="skills-title">SKILLS<span class="color-red">.</span></h2>
+											</div>
+										</div>
+										<div class="row skills-content-row">
+											<div class="col-md-4 skills-content-list">
+												<ul class="skills-list">
+													<li class="skills-list-el">HTML</li>
+													<li class="skills-list-el">CSS</li>
+													<li class="skills-list-el">JavaScript</li>
+													<li class="skills-list-el">jQuery</li>
+													<li class="skills-list-el">WordPress</li>
+												</ul>
+											</div>
+											<div class="col-md-8 skills-content-text">
+													<p class="skills-text">Website development. Online stores. Blogs. Portfolio sites. Sites without CMS. Sites with CMS. Sites from mock-ups. Site support. Site correction. Plugin installation. Plugin rework. English /Russian(Native)/ Ukrainian(Native) languages.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide portfolio-slide section" id="slide2">
+									<div class="container-fluid">
+										<div class="row">
+											<div class="col-md-12">
+												<h2 class="portfolio-title">PORTFOLIO<span class="color-red">.</span></h2>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-10 col-md-offset-1 porfolio-column">
+												<div class="portfolio-slider">
+													<div class="open-modal" data-toggle="modal" data-target=".example-m-bees">
+														<div class="m-bees-img project-preview-img">
+															<span style="color:#ffffff;">m</span><span style="color:#000000;">b</span>
+														</div>
+														<h3 class="slider-title">M Bees</h3>
+														<p class="slider-project-about">Online store for educational hand-made toys shop.</p>
+													</div>
+													<div class="open-modal" data-toggle="modal" data-target=".example-zvezda-davida">
+														<div class="zvezda-davida-img project-preview-img">
+															<span style='color: #16a1e4;'>z</span><span style='color:#424242;'>d</span>
+														</div>
+														<h3 class="slider-title">Zvezda Davida</h3>
+														<p class="slider-project-about">Site for magazine.</p>
+													</div>
+													<div class="open-modal" data-toggle="modal" data-target=".example-no-box">
+														<div class="no-box-img project-preview-img">
+															<span style='color:#c6a15b;'>n</span><span style='color:#b4b4b4;'>b</span>
+														</div>
+														<h3 class="slider-title">No Box</h3>
+														<p class="slider-project-about">Portfolio site for printing house.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide contact-slide section" data-anchor="contact-section" id="slide3">
+									<div class="containter-fluid">
+										<div class="row">
+											<div class="col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-6 contact-column">
+												<div class="contact-form">
+													<div class="contact-form-content">
+														<h2 class="contact-title">Contact me<span class="color-red">.</span></h2>
+														<span class="contact-text">
+<img class="icon icons8-Point-Objects" width="40" height="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADq0lEQVRoQ92ZjXHTMBiGkwmACUgnoJ2AdALoBIQJoBMQJqBMQDoB7QSkE1AmwJ2AdoLwPrlPPln+kxPb8lV3usay43yPvh/pVeezZ9Lmz4Rj1gqy2+0+CHapfmod9nvrN/P5/HYKk1ELIoD3MvCb+qLF0Ez3LwV0kxKoEkQQAHw2wx7090p9K2PxxEz38Q5e4pnX9tyV7l+mgimByEiM/mQGMdNc1zY9DwzgtO963k3AqEwFEAunn2bBmfNAm0Xmod/23EWKMAtB/sqYhcV8oydCOM8zmUBO2uD7vp+DyJCVXv5D/UGGAJM33eOa8CE3aOQKYZcFz3FNzozuFR9kIwMotYW8MAjC5mUwi4+6JvxyGM8r1xpnYkZrPgjGMuOF3JBxlNV36nfqlGQaY2/Vb2WwG3PVjPfca/xsNAr9kA+y44dlQJg3/8wbr3QLL2Aw3mG8lA+6V/meoaF8EIx8oZ4bbEaXxi3cKAyFfPIAnwQdhuKgLD7I1sLlXEbwed+80GLswoYp0cuK0GLsl/qd3sHn0VpVsn+VEWsPZKHPVCm85bcnXSxcuBk03/uinjTZSVpmuirugWFd8cvvyocwELcOpSu/ZojLh0J4xcSHQtCF1ej5gX1hhdpojLWEDeJ5DIAXguQGMKOHVRUIIUR40KK94nmD752EK36XCTn02ardb2evCCSpN0oesTyh/mfqVKnWpPV2zKUq1mV2j1WidcLKaQyA2LLsV/SqJgNcpSqU7ViIvpRok9Rl7XijXmugjFjrPuvGH8G60hzLwGLbmxJtAlnKImKfVhJZgZiKLgyOsm8l2niK4v0Y3sFYf9MIJF7oLG+HUKIxx0EuxDYC+WgFAQG2IqTUl0051JJXrWcC4ffrlGgMCLPu9PgeRA2QypBrS5ChlGgriHnAVTFXvSjRnWfT3rXR396VaBSIGeCUIpcHb0PkkUGUaBcQvLC10OmcFy7k6hSkxo9SotEg5hXy5fGYvZQMHkSJdgJpS+SY+wLBqxxc9KpEU4C4ZD9Gibrik+dqCpBBlOjoIJZrvSvRVCDof078e1OiqUAWgnAnM9EbziYlmgTEwmutv0iAaK80KdGUIF2V6FLQ7LhRoqfhWpYMxLzSmxJNCmIwTibU6poYJToFEF8mlBI/VokmBwkSP9N1fthhp/tRSnQSIEGIHaREpwRCiLGh5DytsxKdDEhQxTor0UmBGIzbHXMZrUSnCHKQEp0ciHmFvRj/mKWKRbVJgkRZHjz0H9GVg1Hue9SqAAAAAElFTkSuQmCC">
+Dnipro, Ukraine</span>
+														<span class="contact-text"><a href="http://github.com/platon-rov">
+<img class="icon icons8-GitHub" width="40" height="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAEq0lEQVR4Xu2ajVEbMRCFcQUJFcRUEKggpoIkFcRUEKggpoIkFQQqiKkgpoKQCmIqCFTgvM+jmzkOn3Yl64w9vp3RAHM6rfbt2x/pGBzsuQz23P6DHoCeAXuOQB8Ce06APgluJAQWi8VrMe29xnEYQ/1k1GWuPxiz8PNmMBg8dM3QzgAIRn+SAeNgdI4td3rpSuO6KzCKAyDD8eznYDieLyEwASC+CwhYUkyKAiDjv2hn5xqlDG8aChDfBMJlKQSKACDDie0fa1A91R5C42MJNqwNgIwnxr926PU2cGDDmUCYpqJXn78WAMF4PP+SAgjkhyzJBmBLjK+MzgYhC4AtM74CgZyQHA7JAISE9+sFYt6iODnhJDUx5gDwO5LtT7WBWQDpQyiJr6ydG88fKX0aU619p7VH+h0HrJI7zTlJ0ZcEgJRPtDi1fpU8SvmT+h+6QfqC+jsYRBlDqla3eo9yWgeMek/df9ISa91FxMhLzWefLnEDEDo8vN/W5NxKMd55JuFdjMND89jOPHM1Z6Y13rWskxQKKQBAQ1rcNmkFwOWKhEkGAKzkZoELgEDlvxHvo3SbAIAFR54DlBcA4phuLyYPUniY4MjsqXLIP8MZrO3qDbwAxDJ/ZcizJJhtofGiAMDDVnVxVQQTgEB/ELdkWQKtSSWeG6WwruLQCgMPAGOtaPX73N5Q9zcmjkTIXszu0AOAlf1RtDHvVwgLAAD/aSBuVgMPANC6reaif2Ox3zTWkQvMyuQBgPI3jCBtKukqLhxhMFdoHsX0ewCItZ2svc0AHAiAqI09ABY9jYPHXjBgLivfROPIoJkFcu5zh3PutbVY/rI/jTkSDfun7waojUk4NZKgY2LmJ08OsMogG3D13SXRcV7LFQHA0wjNxIDTkgZaawkAboVGxjy+JHGQaxUPAzwdFwo21g0mnAWKtMLcAHkOQ1xzAcKT6yvLk6nPw+EM73PDZMn6hyE0SCnGvbW06XmnICQa/0fOMEEyQyAAMNZP60RY4QMIJMXq4tOBmz0l0J49DO3ZyxmuxOwFgDCYa9QvIW7091RjpMH/ATSFZ1cCgnnZIsP5xwockHLcdh/QXAAEFjSrAR5efqEN3wEwuK1hmukZg3uDKDOCp6v/JgHcHDGzf7VoCgCrWEDCI/HxwYJ4w8i2q6p7PTu2kmSIc0CKdp8RVPjuMLT0JAMQWLDqcnSuZ3ySejCaE1dMRvR4mXChvcBWl7gZUK3W0hpfSunE2DwguRJjQp1vGml2fs0XcgBYRXVCgfPAsgcINCZ+hxoYzQ1tUn/gOOg0bYH6Iy/IWSFQYwEgcFVeFzL+mYt3jkkZALgZVlefzIAaCGP93uwN+JB54bDPnJIIgDu/rB0C9QVakt5cc640ZrW5ZOVr0+rahAQAso1HXTYDGuGAsdEvNQIgSZcDgKyYL8qABgiUntbr88IA3ErXeWrCW8XAJK9YFJbX6BMmq9hQCAC8Pkmp89aeiwKAslACAWFcB2JNADCcvILxSeV04wDUFYYkCRD0AbDDLXqXkKLcUl4xvhMpzoBOdtnhoj0AHYK7E0v3DNgJN3W4yZ4BHYK7E0v3DNgJN3W4yf/mfvRQu2ZhGAAAAABJRU5ErkJggg==">
+														github.com/platon-rov</a></span>
+														<span class="contact-text"><a href="mailto:platon.rov@gmail.com">
+<img class="icon icons8-Send-Mass-Email" width="40" height="40" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADcUlEQVR4Xu2bgVHkMAxFSQXcdUAHcBUw1wFUQKgAqASogKUC6AA6ADqgg7urYE8/42Rsr2JLySax4/VMhtldx5GevxQ5MdVR4a0q3P+jA4CDAiwC2+32ij7e0nGWCZhPsvOhqqrnofY2IUCO/6A/bxk57vsLEL8JxF8tiBbAR8bOtz5/EoBfagA0+zWd9KQ9MdH+1wRho7GtIgD+7COebofISXPhsX1N2L7SOOfWWGoVAMDWM+Zn6s639hoIf2z7yXbVrX0HgHaAsTM59nx/ArX2HwBoCK6xThApYM11ghTAauuEKIC11wkSANzsf1P2vqSMixI0uUaThrXMCx0nnnE7dYIEgF8n2GOiYHpMiQA5f0P2PPTZ5N8mxwLAdVCNoQRVL0T2Cc4kapT0F6FxpwCA6y0aEgHJ77DYB4BLGnVDxzFDevaQCEj+H9lXm1zQmToaAAagiyK5QPqnDIRZQiIi+S+EApn6HSv01DnAJkiDI9kg6fht0pCISP6RbMRTraZNCsBcAElntpCISZ6chwK7NjkAA2HykJBK3pfiLAAsuU0SEhrJLwpAEBLqR1ZayS8OQBASyBd3scLJSP6e+tZMku2yPPOb89WsIcDQh7N41+A3rCGgBnYtYSSPqo57P+Fk+aQBGDVgBpEb/MIJpTOUAEhdM6tPzDzeVdgNhQ0KLad/8gAMBMwkDOcKJ3x/ZxwJSb4esvpcNAS8mcWMQgl9IYHunORHPaZPBkALw0icCwlfzYMk7w+SHABBSKALsvwgyWcBwEDoC4lRks8GABMS+Eqd5bO4CwiMbJLfkCwvGNt5pLeX5wGxi6b0e5JJcE5ABwBEwAZeXAjE1DbqkVhs8Bx+j26QiMVQDk6GbAQALEntRco7fcZrr+ZFRwkAavJTvElKuwNjboXQhD2RjdfS67bb5HwV9J6fAQBk/Y0Ugr1REtLn1usOjEwAwGYRBGdHlVmq4qVCL4iMAIggRLeU5ZYEfXtjSigBQFAJagA0WtIbKRkFtDmMzQkSAME6QXq7matfAACrBAkAVZ2gddRPqhEHtMNz/R0lRAGYalBcJ2gtXACAowQpADy/E9UJmQB4JvBQtu6fpiR1QgYAOufVALTOLdE/kkMc50sDsON8SQBY50sB0Ot8CQCCzq8dQNT5NQMQOb9WACh1myJH0v4DtvLVX7J1K70AAAAASUVORK5CYII=">
+														platon.rov@gmail.com</a></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="site-content">
+						
+					</div>
+
+				</div>
+			</div>
+			<nav class="outer-nav right vertical" id="site-menu-outer">
+				<a href="#main-section" class="menu-item" data-menuanchor="main-section">Home</a>
+				<a href="#skills-section" class="menu-item" data-menuanchor="skills-section">Skills</a>
+				<a href="#portfolio-section" class="menu-item" data-menuanchor="portfolio-section">Portfolio</a>
+				<a href="#contact-section" class="menu-item" data-menuanchor="contact-section">Contact</a>
+			</nav>
 		</div>
+		<div class="modal fade example-m-bees" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<h2 class="modal-project-name">M-Bees<span class="color-red">.</span></h2>
+					<a href="http://m-bees.in.ua/" class="project-url">m-bees.in.ua</a>
+					<h3 class="project-goal">Goal</h3>
+					<p>Creating an online store with a blog for the Ukrainian store of hand-made toys.</p>
+					<h3 class="project-solution">Solution</h3>
+					<p>Use CMS WordPress for blog with eCommerce platform WooCommerce for online-store function. Using a minimalistic style with several basic colors - white and red to emphasize the focus of the site. Create pages of online store, blog, page about authors of toys, feedback forms. Using an extension LiqPay for WooCommerce as payment options. Connecting the required plugins and widgets</p>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12 screens">
+								<img src="source/mbees-main.jpg" alt="" class="project-screen">
+								<img src="source/mbees-shop.jpg" alt="" class="project-screen">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade example-zvezda-davida" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<h2 class="modal-project-name">Zvezda Davida<span class="color-red">.</span></h2>
+					<a href="http://zvezdavid.com.ua/" class="project-url">zvezdavid.com.ua</a>
+					<h3 class="project-goal">Goal</h3>
+					<p>Creating site for posts articles form magazime.</p>
+					<h3 class="project-solution">Solution</h3>
+					<p>Use CMS WordPress for the blog function(for posts articles). Use light colors - a white background and blue elements(links, menu) to make reading articles comfortable. Connect the download links for download offline for offline reading.</p>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12 screens">
+								<img src="source/zvezda-main.jpg" alt="" class="project-screen">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade example-no-box" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<h2 class="modal-project-name">No-Box<span class="color-red">.</span></h2>
+					<a href="http://no-box.com.ua/" class="project-url">no-box.com.ua</a>
+					<h3 class="project-goal">Goal</h3>
+					<p>Create a portfolio site in dark colors for a printing house with a feedback form</p>
+					<h3 class="project-solution">Solution</h3>
+					<p>Create a sectional single-page(landing) without using CMS. In sections place - examples of works, provided services, feedback form. Use dark-blue, gold and silver colors. Place an interactive logo on the main section.</p>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12 screens">
+								<img src="source/nobox-main.jpg" alt="" class="project-screen">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script
+  		src="https://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous"></script>
+  	<script src="js/bootstrap.min.js"></script>
+  	<script src="js/classie.js"></script>
+	<script src="js/menu.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			$('.portfolio-slider').slick({
+			  centerMode: true,
+			  centerPadding: '60px',
+			  slidesToShow: 3,
+			  responsive: [
+			    {
+			      breakpoint: 768,
+			      settings: {
+			        arrows: false,
+			        centerMode: true,
+			        centerPadding: '40px',
+			        slidesToShow: 2
+			      }
+			    },
+			    {
+			      breakpoint: 480,
+			      settings: {
+			        arrows: false,
+			        centerMode: true,
+			        centerPadding: '40px',
+			        slidesToShow: 1
+			      }
+			    }
+			  ]
+			});
+
+			// ADD resize !!!
+
+			var mains = $('#site-menu').find('.dot-main');
+
+			$('#site-content').fullpage({
+				anchors:['main-section', 'skills-section', 'portfolio-section', 'contact-section'],
+				menu: "#site-menu-outer",
+				normalScrollElements: '.modal',
+				scrollOverflow: true, 
+				afterLoad: function(anchorLink, index) {
+					$(mains[index-1]).addClass('active');
+				},
+				onLeave: function(index, nextIndex, direction) {
+					$(mains[index-1]).removeClass('active');
+				},
+				afterResize: function() {
+					$.fn.fullpage.moveTo('main-section');
+				}
+			});
+
+		});
+	</script>
 	</body>
-</html>
+</htm

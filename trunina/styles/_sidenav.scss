@@ -1,0 +1,67 @@
+ /* The side navigation menu */
+#side-nav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 85px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#side-nav.is-active {
+    width: 9.5vw;
+}
+
+/* The navigation menu links */
+#side-nav a {
+    font-family: 'Abril Fatface', cursive;
+    padding: 32px 0;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+#side-nav a:hover {
+    color: #f1f1f1;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    position: relative;
+    transition: right .5s;
+}
+
+@media (max-width: 992px) {
+    #side-nav.is-active {
+        width: 11vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #side-nav.is-active {
+        width: 14vw;
+    }
+}
+
+@media (max-width: 576px) {
+    #side-nav.is-active {
+        width: 18vw;
+    }
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    #side-nav {padding-top: 15px;}
+    #side-nav a {font-size: 18px;}
+} 

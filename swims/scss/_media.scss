@@ -1,0 +1,71 @@
+// @import "vars";
+
+
+// /*==========  Desktop First  ==========*/
+
+// // ≥1200px
+// @include media-breakpoint-down(lg) {
+	
+// }
+
+// // ≥992px
+// @include media-breakpoint-down(md) {
+
+// }
+
+// // ≥768px
+// @include media-breakpoint-down(sm) {
+
+// }
+
+// // ≥576px
+// @include media-breakpoint-down(xs) {
+
+// }
+
+
+// /*==========  Mobile First  ==========*/
+
+@media (max-width: 1200px) {
+	.header__logo  { min-height: rem(125px); }
+	.header__logo > img {
+		min-width: rem(90px);
+	}
+	.main-nav__menu li a,
+	.header__logo {
+		font-size: 1rem;
+	}
+	.general__title_size_big {
+		font-size: 3rem;
+	}
+
+	.wholesale__slide-button.slick-prev {
+		left: rem(-15px);
+	}
+
+	.wholesale__slide-button.slick-next{
+		left: calc(100% - 15px);
+	}
+
+	.missions__lady-title,
+	.missions__lady-subtitle {
+		max-width: rem(200px);
+	}
+
+	.missions__lady-subtitle {
+		padding-left: rem(15px);
+		text-align: left !important;
+	}
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+
+}

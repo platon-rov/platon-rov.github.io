@@ -1,0 +1,6 @@
+@import "_mixins/font-face";
+
+@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
+@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Open+Sans:300,400,700&subset=cyrillic');

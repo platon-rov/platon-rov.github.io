@@ -33,34 +33,51 @@ function navTransform(prevScrollpos, currentScrollPos) {
   return currentScrollPos;
 }
 
-$(function() {
-  // Select all links with hashes
-  $('a[href*="#"]')
-    // Remove links that don't actually link to anything
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function(event) {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          event.preventDefault();
-          $('html, body').animate({
-            scrollTop: target.offset().top - 130
-          }, 1000, function() {
-            var $target = $(target);
-            $target.focus();
-            if ($target.is(":focus")) {
-              return false;
-            } else {
-              $target.attr('tabindex','-1'); 
-              $target.focus();
-            };
-          });
-        }
-      }
+var headerHeight = $(window).width() > 768 ? $('.header').height() : 0;
+
+$(document).ready(function () {
+  onScroll();
+  $(document).on("scroll", onScroll);
+
+  $('.nav-menu li a').on('click', function (e) {
+    e.preventDefault(); 
+    $(document).off("scroll");
+
+    $('.sidenav').removeClass('active');
+
+    $('a').each(function () {
+      $(this).removeClass('active');
+    })
+    $(this).addClass('active');
+    
+    $('html, body').stop().animate({
+      'scrollTop': $(this.hash).offset().top - headerHeight
+    }, 500, 'swing', function () {
+      $(document).on("scroll", onScroll);
     });
   });
+});
+
+function onScroll(event){
+  var scrollPos = $(document).scrollTop();
+  var currMenu = $(window).width() > 768 ? $('.main-nav__menu') : $('.side-nav__menu');
+
+  $(currMenu).find('li a').each(function () {
+    var currLink = $(this);
+    var refElement = $(currLink.attr("href"));
+    if (refElement.position().top <= (scrollPos + headerHeight) && refElement.position().top + refElement.height() > (scrollPos + headerHeight) ) {
+      $('.main-nav li a').removeClass("active");
+      currLink.addClass("active");
+    }
+    else{
+      currLink.removeClass("active");
+    }
+  });
+}
+
+$('#sidenav-toggler').on('click', function (e) { 
+  $('.sidenav').toggleClass('active');
+});
 
 $('.wholesale__slider').slick({
   centerMode: true,

@@ -38,7 +38,9 @@
 	.general__title_size_big {
 		font-size: 3rem;
 	}
-
+	.benefits__lady {
+		left: -5%;
+	}
 	.wholesale__slide-button.slick-prev {
 		left: rem(-15px);
 	}
@@ -59,13 +61,245 @@
 }
 
 @media (max-width: 992px) {
+	.header .row {
+		display: flex;
+		align-items: stretch !important;
+	}
 
+	.header__column_position_right {
+		display: flex;
+	}
+
+	.header__logo {
+		padding-top: rem(15px);
+		display: block;
+
+		img {
+			display: block;
+			margin: 0 auto;
+			margin-bottom: rem(15px);
+		}
+	}
+
+	.top-nav__contacts {
+		justify-content: flex-start !important;
+	}
+
+	.main-nav__menu {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.general__content {
+		padding-top: rem(90px);
+	}
+
+	.general__title_size_big {
+		line-height: 3rem;
+		display: block;
+		text-align: center;
+		padding-left: 0;
+		top: 0;
+	}
+
+	.general__lady-img {
+		max-height: 60vh;
+		left: 0;
+	}
+
+	.general__lady-shadow {
+		max-height: 50vh;
+		left: rem(-130px);
+	}
+
+	.general__lady-shadow_size_small {
+		display: none;
+	}
+
+	.benefits__lady,
+	.benefits__shape-wrap {
+		display: none !important;
+	}
+
+	.missions__lady-img {
+		max-width:30vw;
+	}
+
+	.video__title {
+		margin-top: rem(30px);
+		text-align: center;
+	}
+
+	.reviews__slide-body {
+		padding-bottom: rem(60px);
+	}
+
+	.footer__nav-menu {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		max-height: none;
+
+		li {
+			min-width: 50%;
+		}
+	}
 }
 
 @media (max-width: 768px) {
+	.header {
+		position: absolute;
+	}
+	.navbar-toggler {
+		position: fixed;
+		right: 20px;
+		top: 20px;
+	}
+	.logo img,
+	.logo__text {
+		margin: 0 auto !important;
+	}
+	.logo img {
+		margin-bottom: rem(15px) !important;
+	}
+	.logo__text {
+		text-align: center;
+	}
+	.main__general {
+		clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+	}
+	.general__content {
+		padding-top: 0;
+		text-align: center;
+	}
+	.reasons__content-back {
+		max-width: 100%;
+	}
+	.reasons__lady {
+		display: none;
+	}
+	.reasons__card-wrap,
+	.benefits-list__item {
+		&:nth-last-child(2) {
+			margin-bottom: rem(30px);
+		}
+	}
+	.benefits-list {
+		display: block !important;
+	}
+	.benefits-list__item {
+		display: flex;
+		align-items: center;
+		min-width: 100%;
+	}
+	.benefits-list__item-icon { 
+		margin-right: rem(30px); 
+	}
+	.main__missions > .container {
+		max-width: none;
+		display: flex;
+		flex-direction: column;
+	}
+	.missions__card {
+		margin: rem(0 50px);
+	}
+	.missions__lady {
+		position: relative;
+		order: 3;
+		padding: rem(0 25px);
 
+		.missions__lady-img {
+			min-width: 100%;
+		}
+
+		.missions__lady-title,
+		.missions__lady-subtitle {
+			display: none;
+		}
+	}
+	.missions__title-wrap {
+		order: 1;
+	}
+	.missions__subtitle-wrap {
+		order: 2;
+	}
+	.missions__content-wrap {
+		order: 4;
+		margin-top: rem(-500px);
+	}
+	.steps__cards-card-wrap {
+		margin-bottom: rem(15px);
+
+		&:nth-last-child(2),
+		&:nth-last-child(3) {
+			margin-bottom: rem(15px);
+		}
+	}
+	.footer__logo {
+		text-align: center;
+		display: block;
+	}
+	.footer__credits {
+		text-align: center;
+	}
+	.footer__nav-menu {
+		li  {
+			text-align: center;
+		}
+	}
+	.footer__social-menu {
+		margin-top: rem(30px);
+		flex-direction: row !important;
+	}
+
+	.sidenav-toggler {
+		display: block;
+	}
 }
 
 @media (max-width: 576px) {
-
+	h1{ font-size: rem(20px); }
+	h2,h3 {font-size: rem(22px);}
+	h4 { font-size: rem(20px); }
+	.btn {font-size: rem(18px);}
+	.contact-form .contact-form__button, 
+	.contact-form .contact-form__input { max-width: 100%; }
+	.benefits-list__item-title {
+		font-size: rem(19px);
+	}
+	.benefits-list__item-text {
+		font-size: rem(18px);
+	}
+	.video__item {
+		max-width: 75%;
+		height: 80%;
+	}
+	.video__border {
+		height: rem(290px);
+		width: rem(290px);
+		border-radius: rem(290px);
+	}
+	.missions__content-wrap {
+		margin-top: rem(-150px);
+	}
+	.missions__card-wrap {
+		padding: 0;
+	}
+	.missions__card {
+		margin: rem(0 10px);
+	}
+	.missions__card-signature {
+		flex-direction: row ;
+		flex-wrap: wrap;
+		justify-content: center !important;
+	}
+	.reviews__slide {
+		margin: 0 10px;
+	}
+	.reviews__slide-body {
+		max-width: 90%;
+	}
+	.reviews__slide-img {
+		display: none;
+	}
 }

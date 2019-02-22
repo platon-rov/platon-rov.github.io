@@ -1,1 +1,0 @@
-document.getElementById("nav-toggler").addEventListener("click",function(){document.getElementById("nav-toggler").classList.toggle("open"),document.getElementById("side-nav").classList.toggle("is-active")});

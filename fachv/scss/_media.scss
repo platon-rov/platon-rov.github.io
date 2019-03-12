@@ -1,0 +1,282 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	.footer__have-questions .have-questions__desc {
+		font-size: 18px;
+	}
+
+	html, body {
+		font-size: 16px;
+	}
+
+	button, .btn, input {
+		min-width: 220px;
+	}
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+	button, .btn, input {
+		min-width: 100%;
+		max-width: 100%;
+	}
+
+	.container {
+		max-width: none;
+	}
+
+	.contacts-min {
+		padding-right: 0;
+
+		&__item:nth-of-type(1) {
+			max-width: 150px;
+		}
+	}
+
+	.splash__title {
+		margin-bottom: 15px;
+		line-height: 1.4em;
+	}
+
+	.splash__items, .splash__desc {
+		margin-bottom: 15px;
+	}
+
+	.about-card__desc {
+		min-height: 165px;
+	}
+
+	.gallery {
+		max-height: 500px;
+
+		&-item__hover {
+			padding: 15px;
+		}
+
+		&-item__hr_small {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+	h1, h2 {
+		font-size: 24px;
+	}
+
+	.title_shadow {
+		font-size: 38px;
+		top: -18px;
+	}
+
+	.header .logo  {
+		margin: 0 auto;
+	}
+
+	.header .contacts-min__wrap {
+		display: none;
+	}
+
+	.splash__container {
+		padding-top: 100px;
+		padding-bottom: 75px;
+		min-height: auto;
+	}
+
+	.splash__person-wrap {
+		display: none;
+	}
+
+	.splash__rectangle {
+		top: -100px;
+		bottom: -100px;
+		right: -150px;
+	}
+
+	.splash__desc {
+		font-size: 16px;
+	}
+
+	.splash__social-menu {
+		left: 50%;
+		transform: translate3d(-50%, 0, 0);
+	}
+
+	.nav-mobile {
+		display: block;
+	}
+
+	.about__rectangle-background {
+		display: none;
+	}
+
+	.about-card-wrap {
+		margin-bottom: 20px;
+	}
+
+	.about-card-wrap > div,
+	& > div:nth-of-type(1),
+	& > div:nth-of-type(2),
+	& > div:nth-of-type(3) {
+		margin-bottom: 40px;
+	}
+
+	.about-card__desc { 
+		min-height: auto;
+	}
+
+	.gallery {
+		max-height: none;
+
+		.gallery-item {
+			margin-bottom: 15px;
+		}
+
+		.gallery-item:nth-of-type(2) {
+			order: 2;
+		}
+
+		.gallery-item:nth-of-type(3) {
+			order: 3;
+		}
+
+		.gallery-item:nth-of-type(4) {
+			margin-top: 0;
+			order: 4;
+		}
+
+		.gallery-item:nth-of-type(5) {
+			margin-top: 0;
+			margin-bottom: 0;
+			order: 5;
+		}
+	}
+
+	.stage {
+		margin-bottom: 100px;
+
+		&:after {
+			content: '';
+			display: block;
+			width: 1px;
+			height: 50px;
+			background: #7D7D7D;
+
+			position: absolute;
+			top: 110%;
+			right: 50%;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	.stage:nth-of-type(2) .stage__desc, .stage:nth-of-type(3) .stage__desc {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.work, .about {
+	    padding-top: 40px;
+	    padding-bottom: 40px;
+	}
+
+	.team {
+    	padding-top: 40px;
+    }
+
+    .have-questions > div {
+		margin-bottom: 15px;
+    }
+
+    .contacts {
+    	padding-bottom: 0;
+    }
+
+    .contacts__map-column {
+    	padding: 0;
+    }
+
+    .contacts .row > div:nth-of-type(1) {
+    	order: 2;
+    }
+
+    .contacts .row > div:nth-of-type(2) {
+    	order: 1;
+    }
+
+    .contacts-list__item-desc {
+    	margin: 0 auto;
+    	text-align: center;
+    }
+
+    .contacts-list__item-icon {
+    	display: none;
+    }
+
+    .social-menu__item:nth-of-type(2) {
+    	margin: auto 35px;
+    }
+
+    .team__back {
+    	bottom: 100px;
+
+    	& img {
+    		min-height: 100%;
+    	}
+    }
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+	.gallery .gallery-item img {
+		min-width: 100%;
+	}
+	.splash__item:nth-of-type(2) .splash__item-desc, .splash__item:nth-of-type(2) .splash__item-title {
+		margin-right: 10px;
+		margin-left: 10px;
+		padding-left: 10px;
+	}
+	.splash__item-title {
+		font-size: 16px;
+	}
+	.splash__item-num {
+		font-size: 24px;
+	}
+	.splash__rectangle {
+	    top: -300px;
+	    bottom: -300px;
+	    right: -350px;
+	}
+	.about-card__desc {
+		margin-bottom: 15px;
+	}
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+}

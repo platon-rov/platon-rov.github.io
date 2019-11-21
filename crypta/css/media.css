@@ -16,7 +16,9 @@
   .slide .slick-next {
     right: 2%; }
   .slide .slick-prev {
-    left: 83%; } }
+    left: 83%; }
+  .investBlock1 {
+    padding: 30px 0px; } }
 
 @media (max-width: 920px) {
   .wrapInvestBlock1 {
@@ -95,15 +97,17 @@
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
-            justify-content: center; } }
+            justify-content: center; }
+  .wrapVideo-modific {
+    position: static;
+    margin-top: 30px; }
+  .strim {
+    padding: 30px 0px 0px 0px; } }
 
 @media (max-width: 500px) {
   .garantCard {
     margin: 0;
     padding: 0; }
-  .wrapVideo-modific {
-    position: static;
-    margin-top: 30px; }
   .strim {
     padding: 30px 0px 0px 0px; }
   .investBlock1 {

@@ -1,19 +1,6 @@
 $(function(){
-     $('#accordion .card-header').each((index, cardHeader) => {
-          $(cardHeader).click(() => {
-               $(cardHeader).each((cardHeaderInnerIndex, cardHeaderInner) => {
-                    $(cardHeaderInner).removeClass('whiteBG');
-               });
-
-               $('#accordion .card-body').each((bodyIndex, collapseBody) => {
-                    $(collapseBody).hasClass('collapse') ?
-                         $(collapseBody).css('display', 'none') : 
-                         $(collapseBody).slideUp(300).addClass('collapse');
-               });
-
-               $(cardHeader).addClass('whiteBG');
-
-               $(cardHeader).next().slideDown(300).removeClass('collapse');
-          });
-     });
+     $('.toggle-mob-slide-items').click(item => {
+          $('.toggle-mob-slide-items').fadeOut();
+          $('.slide__item-mob-collapsed').removeClass('slide__item-mob-collapsed');
+     })
 });

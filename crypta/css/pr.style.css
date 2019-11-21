@@ -33,6 +33,41 @@
     margin-left: 8px;
 }
 
+/* INVEST PAGE */
+.breadcrumbs {
+    position: relative;
+    top: 20px;
+}
+
+.garantCard {
+    cursor: pointer;
+}
+
+.garantCard__text a {
+    color: #F5CD06;
+    text-decoration: underline;
+}
+
+.garantCard:hover {
+    background-color: #ffffff;
+}
+
+.garantCard:hover svg path {
+    fill: #F5CD06;
+}
+
+.cabinet-image__image {
+    max-width: 100%;
+}
+
+.cabinet-header {
+    display: none;
+}
+
+.strim-btn-out {
+    display: none;
+}
+
 @media(max-width: 1199.98px) {
     .slide-news .slick-prev {
         left: 88%
@@ -308,6 +343,183 @@
 
     .address {
         padding: 30px 0 0px 0;
+    }
+
+    /* INVEST PAGE */
+    .breadcrumbs {
+        top: 10px;
+    }
+
+    .descriptIvvest__head {
+        font-size: 20px;
+        text-align: center;
+        padding: 10px 0 20px 0;
+        line-height: 1em;
+    }
+
+    .descriptIvvest__text {
+        text-align: center;
+        margin: 0 0 10px 0;
+        font-size: 12px;
+        max-width: 100%;
+    }
+
+    .descriptIvvest__text + .btnYellow {
+        display: none;
+    }
+
+    .wrapInvestBlock1 {
+        margin: 120px 0 160px 0;
+    }
+
+    .garant__head {
+        font-size: 20px;
+    }
+
+    .garantCard {
+        height: auto;
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    .garantCard svg {
+        width: 42px;
+        height: 42px;
+    }
+
+    .garantCard__text {
+        font-size: 14px;
+    }
+
+    .pravila__head {
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 20px;
+        line-height: 1em;
+        margin: 0;
+    }
+
+    .pravila__item {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .tarif__head {
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 20px;
+        line-height: 1em;
+        margin: 0;
+    }
+
+    .tarifItems__head {
+        font-size: 18px;
+    }
+
+    .tarifItems__list {
+        min-height: 0;
+    }
+
+    .tarifItems__item {
+        font-size: 14px;
+    }
+
+    .tarifItems .btnYellow {
+        width: 190px;
+        max-width: 190px;
+    }
+
+    .pravila {
+        padding-bottom: 0;
+    }
+
+    .tarif {
+        padding-bottom: 30px;
+    }
+
+    .cabinet {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .cabinet-header {
+        display: block;
+        order: 1;
+    }
+
+    .cabinet-image {
+        order: 2;
+    }
+
+    .cabinet-blocks {
+        order: 3;
+    }
+
+    .cabinet__head {
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 20px;
+        line-height: 1em;
+        margin: 0;
+    }
+
+    .cabinet__text {
+        font-size: 14px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .cabinet-blocks-header {
+        display: none;
+    }
+
+    .cadinetCard {
+        padding: 10px 30px;
+        min-height: 0;
+        height: auto;
+        margin: 5px 0;
+    }
+
+    .cadinetCard__text {
+        font-size: 14px;
+    }
+
+    .cabinet-blocks .btnYellow {
+        margin-top: 30px;
+    }
+
+    .strim__head {
+        font-size: 20px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        line-height: 1em;
+        margin: 0;
+    }
+
+    .strim__text {
+        font-size: 14px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .strim-content .btnYellow {
+        display: none;
+    }
+
+    .strim-btn-out {
+        font-size: 14px;
+        max-width: 75%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .FAQ {
+        padding-top: 90px;
+    }
+
+    .FAQ__head {
+        padding-bottom: 0;
     }
 }
 

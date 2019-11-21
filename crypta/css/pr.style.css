@@ -1,8 +1,16 @@
 /* PLATON ROV ADDITIONAL STYLES */
 
+.block1 {
+    min-height: calc(100vh - 60px);
+}
+
 .block2 .myCard .link {
     color: #7cf1f5;
     text-decoration: underline;
+}
+
+.slide__item {
+    outline: none;
 }
 
 #accordion .card-header {
@@ -36,8 +44,39 @@
 }
 
 @media(max-width: 767.98px) {
+    .block1 {
+        min-height: calc(100vh - 75px);
+    }
+
+    .head__btn {
+        width: 50%;
+    }
+
+    .sliderAdvantages__head {
+        margin: 0;
+    }
+
+    .sladeCard {
+        margin: 10px 0;
+    }
+
+    .sliderPay__item {
+        padding: 0 15px;
+        width: auto !important;
+        max-height: 20px;
+    }
+
+    .FAQ .btn-link {
+        font-size: 17px;
+    }
+
+    .card-header svg {
+        width: 40px;
+        height: 40px; 
+    }
+
     .slide-news {
-        max-height: 400px;
+        height: 450px;
     }
 }
 

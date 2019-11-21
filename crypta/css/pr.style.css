@@ -1,0 +1,44 @@
+/* PLATON ROV ADDITIONAL STYLES */
+
+.block2 .myCard .link {
+    color: #7cf1f5;
+    text-decoration: underline;
+}
+
+#accordion .card-header {
+    cursor: pointer;
+}
+
+.contakt__text {
+    margin-bottom: 0;
+}
+
+@media(max-width: 991.98px) {
+    .wrapHend {
+        margin: 0;
+    }
+
+    .btn-telegram {
+        max-width: 100%;
+    }
+
+    .slider-advantages .sliderAdvantages__head,
+    .footerForm__head,
+    .footerForm__text {
+        text-align: center;
+    }
+
+    .footerForm__sm-text {
+        padding-top: 1em;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media(max-width: 767.98px) {
+    .slide-news {
+        max-height: 400px;
+    }
+}
+
+

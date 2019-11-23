@@ -1,5 +1,36 @@
 /* PLATON ROV ADDITIONAL STYLES */
 
+/* HEADER */
+
+.containerMenu {
+    position: relative;
+}
+
+.lang-dropdown button {
+    outline: none;
+}
+
+.lang-dropdown button::after {
+    color: #ffffff;
+}
+
+.lang-dropdown-menu {
+    background: #383E49;
+    padding: 5px;
+    left: -3px;
+    min-width: 145px;
+    border-top: none;
+    border-radius: 0 0 5px 5px;;
+}
+
+.lang-dropdown-menu .dropdown-item {
+    background: #383E49;
+    padding: .25em;
+    padding-left: .55em;
+}
+
+/* FRONT PAGE */
+
 .block1 {
     min-height: calc(100vh - 60px);
 }
@@ -18,7 +49,27 @@
 }
 
 .toggle-mob-slide-items {
-    display: none;
+    display: none !important;
+}
+
+.valuta__dropdown {
+    margin-top: -6px;
+    background: #333943;
+    min-width: 0px;
+    max-width: 78px;
+    border: 1px solid #F5CD06;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.valuta__dropdown .dropdown-item {
+    padding-left: .75em;
+    padding-right: 2em;
+    color: #F5CD06;
+}
+
+.valuta__dropdown .dropdown-item:hover {
+    color: #ffffff;
 }
 
 #accordion .card-header {
@@ -34,6 +85,7 @@
 }
 
 /* INVEST PAGE */
+
 .breadcrumbs {
     position: relative;
     top: 20px;
@@ -75,6 +127,20 @@
 }
 
 @media(max-width: 991.98px) {
+    header > div {
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        padding-top: 0;
+    }
+
+    .containerMenu {
+        order: 5;
+        flex-basis: 100%;
+        left: 0;
+    }
+
     .wrapHend {
         margin: 0;
     }
@@ -101,10 +167,6 @@
 }
 
 @media(max-width: 767.98px) {
-    .navbar {
-        padding-top: 0;
-    }
-
     .block1 {
         min-height: 0;
     }

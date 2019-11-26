@@ -1,5 +1,9 @@
 /* PLATON ROV ADDITIONAL STYLES */
 
+h1, h2 {
+    font-size: 24px !important;
+}
+
 /* HEADER */
 
 .containerMenu {
@@ -27,6 +31,10 @@
     background: #383E49;
     padding: .25em;
     padding-left: .55em;
+}
+
+.sliderPay__item {
+    padding: 0 15px;
 }
 
 /* FRONT PAGE */
@@ -91,8 +99,16 @@
     top: 20px;
 }
 
+.descriptIvvest__text {
+    font-size: 16px;
+}
+
 .garantCard {
     cursor: pointer;
+}
+
+.garantCard__text {
+    font-size: 18px;
 }
 
 .garantCard__text a {
@@ -108,6 +124,15 @@
     fill: #F5CD06;
 }
 
+.pravila {
+    padding-bottom: 0;
+}
+
+.tarifItems__list {
+    padding: 10px 0;
+    min-height: 0;
+}
+
 .cabinet-image__image {
     max-width: 100%;
 }
@@ -116,9 +141,15 @@
     display: none;
 }
 
+.cabinet-image {
+    padding: 15px 10px;
+}
+
 .strim-btn-out {
     display: none;
 }
+
+
 
 @media(max-width: 1199.98px) {
     .slide-news .slick-prev {
@@ -290,10 +321,6 @@
         margin-bottom: 20px;
     }
 
-    .sliderPay__item {
-        padding: 0 15px;
-    }
-
     .tableBlock__head {
         margin: 0;
         padding-top: 20px;
@@ -422,7 +449,7 @@
     .descriptIvvest__text {
         text-align: center;
         margin: 0 0 10px 0;
-        font-size: 12px;
+        font-size: 14px;
         max-width: 100%;
     }
 
@@ -447,10 +474,6 @@
     .garantCard svg {
         width: 42px;
         height: 42px;
-    }
-
-    .garantCard__text {
-        font-size: 14px;
     }
 
     .pravila__head {

@@ -20,25 +20,9 @@ $(function(){
         speed: 8000,
         autoplaySpeed: 0,
         cssEase: 'linear',
-        slidesToShow: 7,
+        slidesToShow: 1,
         slidesToScroll: 1,
-        responsive: [
-          
-          {
-            breakpoint: 921,
-            settings: {
-              slidesToShow: 5,
-              slidesToScroll: 2
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1
-            }
-          }
-        ]
+        variableWidth: true
       });
 
       $('.slide-news').slick({

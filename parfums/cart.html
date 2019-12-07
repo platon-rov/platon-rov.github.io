@@ -445,15 +445,18 @@
                             <div class="col-md-12 contact-form__inner">
                                 <div class="row contact-form__flex">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="contact-form-name" placeholder="Jméno *">
+                                        <div class="form-group cart-first-row">
+                                            <input required type="text" name="cart-name" class="form-control" id="cart-name" placeholder="Jméno a přijmení *">
+                                            <input required type="tel" name="cart-phone" class="form-control" id="cart-phone" placeholder="Telefon *">
 										</div>
-										<div class="form-group">
-                                            <input type="tel" class="form-control" id="contact-form-name" placeholder="Telefon *">
+										<div class="form-group cart-second-row">
+											<input required type="text" name="cart-street" class="form-control" id="cart-streen" placeholder="Ulice *">
+											<input required type="text" name="cart-zip" class="form-control" id="cart-zip" placeholder="PSČ *">
 										</div>
-										<div class="form-group">
-                                            <input type="tel" class="form-control" id="contact-form-name" placeholder="Adresa *">
-                                        </div>
+										<div class="form-group cart-first-row">
+											<input required type="text" name="cart-city" class="form-control" id="cart-city" placeholder="Město *">
+											<input required type="text" name="cart-country" class="form-control" id="cart-country" placeholder="Země *">
+										</div>
                                     </div>
 
                                     <div class="col-md-6">
@@ -461,12 +464,6 @@
                                             <textarea class="form-control contact-form__textarea" placeholder="Předmět"></textarea>
                                         </div>
                                     </div>
-								</div>
-								
-								<div class="row">
-									<div class="col-md-6">
-										
-									</div>
 								</div>
                             </div>
 						</div>
@@ -476,12 +473,17 @@
 									Vyberte prosím dopravu 
 								</h4>
 								<label class="third-color checkbox-wrap">
-									<input type="checkbox" name="delivery" value="" class="checkbox-input">
+									<input required id="ceska-posta" type="radio" name="delivery" value="ceska-posta" class="checkbox-input">
 									<span class="checkmark"></span>
 									Česka pošta
 								</label>
 								<label class="third-color checkbox-wrap">
-									<input type="checkbox" name="delivery" value="" class="checkbox-input">
+									<input required id="slovenska-posta" type="radio" name="delivery" value="slovenska-posta" class="checkbox-input">
+									<span class="checkmark"></span>
+									Slovenská pošta
+								</label>
+								<label class="third-color checkbox-wrap">
+									<input required id="osobni-odber" type="radio" name="delivery" value="osobni-odber" class="checkbox-input">
 									<span class="checkmark"></span>
 									Osobní odběr
 								</label>
@@ -492,17 +494,17 @@
 								</h4>
 
 								<label class="third-color checkbox-wrap">
-									<input type="checkbox" name="delivery" value="" class="checkbox-input">
+									<input required id="cash-on-delivery" type="radio" name="payment" value="cash-on-delivery" class="checkbox-input">
 									<span class="checkmark"></span>
 									Dobírka
 								</label>
 								<label class="third-color checkbox-wrap">
-									<input type="checkbox" name="delivery" value="" class="checkbox-input">
+									<input required id="bank-transfer" type="radio" name="payment" value="bank-transfer" class="checkbox-input">
 									<span class="checkmark"></span>
 									Bankovní převod 
 								</label>
 								<label class="third-color checkbox-wrap">
-									<input type="checkbox" name="delivery" value="" class="checkbox-input">
+									<input required id="payment-on-spot" type="radio" name="payment" value="payment-on-spot" class="checkbox-input">
 									<span class="checkmark"></span>
 									Platba na místě
 								</label>
@@ -517,7 +519,8 @@
 									</span>
 								</span>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-6 cart-order">
+								<input type="text" name="cart-discount-code" class="form-control" id="discount-code" placeholder="Slevový kód">
 								<button type="submit" class="form-control contact-form__btn">Objednávka</button>
 							</div>
 						</div>
